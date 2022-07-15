@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@800&family=Langar&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+<style>
+    .fateh{
+        font-size: 35px;
+        font-family: 'Baloo Paaji 2', cursive;
+        background-color: black;
+        text-align: center;
+        color:deeppink;
+        border-radius: 300px;
+        border-style:double;
+        border-top-color:fuchsia;
+        border-bottom-color: deepskyblue;
+        border-left-color:darkorange;
+        border-right-color: lawngreen;
+        border-width: 10px;
+        padding: 16px;
+    }
+    .fateh#first{
+        margin-top: 125px;
+    }
+    .pages{
+        font-family: 'Langar', cursive;
+        background-color:navajowhite; 
+        color: red;
+        font-weight: 600;
+        text-align: center;
+        font-size: 30px;
+        border:30px solid transparent;
+        border-image: url(floral.png) 220 repeat;
+    }
+    hr{
+        border-color:crimson;
+        border-style: dotted;
+        border-width: 3px;
+        border-radius: 16px;
+    }
+    .header{
+        border-radius: 0 0 16% 16%;
+        display: flex;
+        flex-direction: row;
+        position: fixed;
+        width:100%;
+        top: 0;
+        left: 0;
+        padding: 16px;
+        padding-left: 7px;
+        background-color: black;
+        font-size: 25px;
+        color: white;
+    }
+    .header a.first{
+        color: white;
+        margin-top: 2.6%;
+        text-decoration: none;
+    }
+    .header a:hover{
+        color: springgreen;
+    }
+    .back{
+        margin-left: 16px;
+        margin-right: 7px;
+    }
+    .header a.first:hover .back{
+        transition: 2s;
+        margin-left: 7px;
+        margin-right: 20px;
+        color: springgreen;
+    }
+    .header code{
+        color:springgreen;
+        margin-left: 219px;
+        margin-right: 219px;
+        font-weight: bold;
+        font-size: 70px;
+    }
+    .header code:hover{
+        animation: headerclr 1.6s ease-in-out infinite;
+    }
+    @keyframes headerclr {
+        0%{color: springgreen;}
+        50%{color: white;}
+        100%{color: springgreen;}
+    }
+    .dropbtn {
+        background-color: ghostwhite;
+        color: seagreen;
+        padding: 12px;
+        font-size:18px;
+        border: none;
+        cursor: pointer;
+    }
+    .dropbtn b{
+        margin-left: 16px;
+    }
+    .dropbtn:hover, .dropbtn:focus {
+        background-color: rgb(68, 182, 118);
+        color: white;
+    }
+    .dropdown { 
+        margin-top: 1.9%;
+        display: inline;
+        margin-right: 30px;
+        position: relative;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    .dropdown a:hover {background-color: #ddd; color: seagreen;}
+    .show {display: block;}
+    @media screen and (max-width: 768px){
+        .header{
+            border-radius: 0 0 20% 20%;
+            text-align: center;
+            flex-direction: column;
+            padding: 5px 0;
+        }
+        .back{
+            margin-left: 0;
+        }
+        .header a.first{
+            font-size: 25px;
+        }
+        .header code{
+            font-size: 35px;
+        }
+        .dropbtn{
+            margin-left: 40px;
+        }
+        .dropdown-content{
+            margin-left: 319px;
+        }
+    }
+    @media screen and (max-width: 600px){
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .fateh{
+            width: 100%;
+            font-size: 17px;
+            border-width: 7px;
+            margin: 7px 3px;
+        }
+        hr{
+            width: 111%;
+            margin: 7px 3px;
+        }
+        .pages{
+            width: 103.5%;
+            margin: 7px 3px;
+            font-size: 13px;
+            border: 16px solid transparent;
+            border-image: url(floral.png) 220 repeat;
+        }
+        .header{
+            border-radius: 0 0 20% 20%;
+            text-align: center;
+            flex-direction: column;
+            padding: 5px 0 !important;
+        }
+        .back{
+            margin-left: 0;
+        }
+        .header a.first{
+            font-size: 25px;
+        }
+        .dropbtn{
+            padding: 7px;
+            margin-left: 40px;
+            font-size: 20px;
+        }
+        .dropdown-content{
+            margin-left: 94px;
+        }
+        .dropdown-content a{
+            text-align: center;
+            padding: 10px;
+        }
+        .header code{
+            margin: 0;
+            margin-top: 2%;
+            font-size: 30px;
+        }
+    }
+</style>
+<title>बाराह माहा मांझ</title>
+</head>
+<body>
+    <div class="header" id="header">
+        <a href="index.htm" class="first"><b class="back"><i class="fa fa-angle-double-left"></i></b>Go Back</a>
+        <code id="hname">बाराह माहा मांझ</code>
+        <div class="dropdown">
+            <i onclick="myFunction()" class="dropbtn fa fa-language"><b>Language</b></i>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="Gbarah maha.htm">Gurmukhi</a>
+              <a href="#">Hindi</a>
+              <a href="Ebarah maha.htm">English</a>
+            </div>
+        </div>
+        <script>
+            function myFunction() {
+              document.getElementById("myDropdown").classList.toggle("show");
+            }
+            window.onclick = function(event) {
+              if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                  var openDropdown = dropdowns[i];
+                  if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                  }
+                }
+              }
+            }
+        </script>
+    </div>
+    <script>
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+          if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            document.getElementById("header").style.padding = "0px";
+            document.getElementById("header").style.transition = "0.7s all ease-in-out";
+          } else {
+            document.getElementById("header").style.padding = "16px";
+            document.getElementById("header").style.paddingLeft = "7px";
+          }
+        }
+    </script>
+    <div class="fateh" id="first">
+        <pre>वाहिगुरू जी का खालसा
+वाहिगुरू जी की फतेह</pre>
+    </div>
+<hr> 
+<div>
+    <pre class="pages">    
+बारह माहा मांझ महला ५ घरु ४
+
+ੴ सतिगुर प्रसादि ॥
+किरति करम के वीछुड़े करि किरपा मेलहु राम ॥
+चारि कुंट दह दिस भ्रमे थकि आए प्रभ की साम ॥
+धेनु दुधै ते बाहरी कितै न आवै काम ॥
+जल बिनु साख कुमलावती उपजहि नाही दाम ॥
+हरि नाह न मिलीऐ साजनै कत पाईऐ बिसराम ॥
+जितु घरि हरि कंतु न प्रगटई भठि नगर से ग्राम ॥
+स्रब सीगार त्मबोल रस सणु देही सभ खाम ॥
+प्रभ सुआमी कंत विहूणीआ मीत सजण सभि जाम ॥
+नानक की बेनंतीआ करि किरपा दीजै नामु ॥
+हरि मेलहु सुआमी संगि प्रभ जिस का निहचल धाम ॥१॥
+
+चेति गोविंदु अराधीऐ होवै अनंदु घणा ॥
+संत जना मिलि पाईऐ रसना नामु भणा ॥
+जिनि पाइआ प्रभु आपणा आए तिसहि गणा ॥
+इकु खिनु तिसु बिनु जीवणा बिरथा जनमु जणा ॥
+जलि थलि महीअलि पूरिआ रविआ विचि वणा ॥
+सो प्रभु चिति न आवई कितड़ा दुखु गणा ॥
+जिनी राविआ सो प्रभू तिंना भागु मणा ॥
+हरि दरसन कंउ मनु लोचदा नानक पिआस मना ॥
+चेति मिलाए सो प्रभू तिस कै पाइ लगा ॥२॥
+
+वैसाखि धीरनि किउ वाढीआ जिना प्रेम बिछोहु ॥
+हरि साजनु पुरखु विसारि कै लगी माइआ धोहु ॥
+पुत्र कलत्र न संगि धना हरि अविनासी ओहु ॥
+पलचि पलचि सगली मुई झूठै धंधै मोहु ॥
+इकसु हरि के नाम बिनु अगै लईअहि खोहि ॥
+दयु विसारि विगुचणा प्रभ बिनु अवरु न कोइ ॥
+प्रीतम चरणी जो लगे तिन की निरमल सोइ ॥  
+नानक की प्रभ बेनती प्रभ मिलहु परापति होइ ॥
+वैसाखु सुहावा तां लगै जा संतु भेटै हरि सोइ ॥३॥
+
+हरि जेठि जुड़ंदा लोड़ीऐ जिसु अगै सभि निवंनि ॥
+हरि सजण दावणि लगिआ किसै न देई बंनि ॥
+माणक मोती नामु प्रभ उन लगै नाही संनि ॥
+रंग सभे नाराइणै जेते मनि भावंनि ॥
+जो हरि लोड़े सो करे सोई जीअ करंनि ॥
+जो प्रभि कीते आपणे सेई कहीअहि धंनि ॥
+आपण लीआ जे मिलै विछुड़ि किउ रोवंनि ॥
+साधू संगु परापते नानक रंग माणंनि ॥
+हरि जेठु रंगीला तिसु धणी जिस कै भागु मथंनि ॥४॥
+
+आसाड़ु तपंदा तिसु लगै हरि नाहु न जिंना पासि ॥
+जगजीवन पुरखु तिआगि कै माणस संदी आस ॥
+दुयै भाइ विगुचीऐ गलि पईसु जम की फास ॥
+जेहा बीजै सो लुणै मथै जो लिखिआसु ॥
+रैणि विहाणी पछुताणी उठि चली गई निरास ॥
+जिन कौ साधू भेटीऐ सो दरगह होइ खलासु ॥
+करि किरपा प्रभ आपणी तेरे दरसन होइ पिआस ॥
+प्रभ तुधु बिनु दूजा को नही नानक की अरदासि ॥
+आसाड़ु सुहंदा तिसु लगै जिसु मनि हरि चरण निवास ॥५॥
+
+सावणि सरसी कामणी चरन कमल सिउ पिआरु ॥
+मनु तनु रता सच रंगि इको नामु अधारु ॥
+बिखिआ रंग कूड़ाविआ दिसनि सभे छारु ॥
+हरि अम्रित बूंद सुहावणी मिलि साधू पीवणहारु ॥
+वणु तिणु प्रभ संगि मउलिआ सम्रथ पुरख अपारु ॥
+हरि मिलणै नो मनु लोचदा करमि मिलावणहारु ॥
+जिनी सखीए प्रभु पाइआ हंउ तिन कै सद बलिहार ॥
+नानक हरि जी मइआ करि सबदि सवारणहारु ॥
+सावणु तिना सुहागणी जिन राम नामु उरि हारु ॥६॥
+
+भादुइ भरमि भुलाणीआ दूजै लगा हेतु ॥
+लख सीगार बणाइआ कारजि नाही केतु ॥
+जितु दिनि देह बिनससी तितु वेलै कहसनि प्रेतु ॥
+पकड़ि चलाइनि दूत जम किसै न देनी भेतु ॥
+छडि खड़ोते खिनै माहि जिन सिउ लगा हेतु ॥
+हथ मरोड़ै तनु कपे सिआहहु होआ सेतु ॥
+जेहा बीजै सो लुणै करमा संदड़ा खेतु ॥
+नानक प्रभ सरणागती चरण बोहिथ प्रभ देतु ॥
+से भादुइ नरकि न पाईअहि गुरु रखण वाला हेतु ॥७॥
+
+असुनि प्रेम उमाहड़ा किउ मिलीऐ हरि जाइ ॥
+मनि तनि पिआस दरसन घणी कोई आणि मिलावै माइ ॥
+संत सहाई प्रेम के हउ तिन कै लागा पाइ ॥
+विणु प्रभ किउ सुखु पाईऐ दूजी नाही जाइ ॥
+जिंन्ही चाखिआ प्रेम रसु से त्रिपति रहे आघाइ ॥
+आपु तिआगि बिनती करहि लेहु प्रभू लड़ि लाइ ॥
+जो हरि कंति मिलाईआ सि विछुड़ि कतहि न जाइ ॥
+प्रभ विणु दूजा को नही नानक हरि सरणाइ ॥
+असू सुखी वसंदीआ जिना मइआ हरि राइ ॥८॥
+
+कतिकि करम कमावणे दोसु न काहू जोगु ॥
+परमेसर ते भुलिआं विआपनि सभे रोग ॥
+वेमुख होए राम ते लगनि जनम विजोग ॥
+खिन महि कउड़े होइ गए जितड़े माइआ भोग ॥
+विचु न कोई करि सकै किस थै रोवहि रोज ॥
+कीता किछू न होवई लिखिआ धुरि संजोग ॥
+वडभागी मेरा प्रभु मिलै तां उतरहि सभि बिओग ॥
+नानक कउ प्रभ राखि लेहि मेरे साहिब बंदी मोच ॥
+कतिक होवै साधसंगु बिनसहि सभे सोच ॥९॥
+
+मंघिरि माहि सोहंदीआ हरि पिर संगि बैठड़ीआह ॥
+तिन की सोभा किआ गणी जि साहिबि मेलड़ीआह ॥
+तनु मनु मउलिआ राम सिउ संगि साध सहेलड़ीआह ॥
+साध जना ते बाहरी से रहनि इकेलड़ीआह ॥
+तिन दुखु न कबहू उतरै से जम कै वसि पड़ीआह ॥
+जिनी राविआ प्रभु आपणा से दिसनि नित खड़ीआह ॥
+रतन जवेहर लाल हरि कंठि तिना जड़ीआह ॥
+नानक बांछै धूड़ि तिन प्रभ सरणी दरि पड़ीआह ॥
+मंघिरि प्रभु आराधणा बहुड़ि न जनमड़ीआह ॥१०॥
+
+पोखि तुखारु न विआपई कंठि मिलिआ हरि नाहु ॥
+मनु बेधिआ चरनारबिंद दरसनि लगड़ा साहु ॥
+ओट गोविंद गोपाल राइ सेवा सुआमी लाहु ॥
+बिखिआ पोहि न सकई मिलि साधू गुण गाहु ॥
+जह ते उपजी तह मिली सची प्रीति समाहु ॥
+करु गहि लीनी पारब्रहमि बहुड़ि न विछुड़ीआहु ॥
+बारि जाउ लख बेरीआ हरि सजणु अगम अगाहु ॥
+सरम पई नाराइणै नानक दरि पईआहु ॥
+पोखु सोहंदा सरब सुख जिसु बखसे वेपरवाहु ॥११॥
+
+माघि मजनु संगि साधूआ धूड़ी करि इसनानु ॥
+हरि का नामु धिआइ सुणि सभना नो करि दानु ॥
+जनम करम मलु उतरै मन ते जाइ गुमानु ॥
+कामि करोधि न मोहीऐ बिनसै लोभु सुआनु ॥
+सचै मारगि चलदिआ उसतति करे जहानु ॥
+अठसठि तीरथ सगल पुंन जीअ दइआ परवानु ॥
+जिस नो देवै दइआ करि सोई पुरखु सुजानु ॥
+जिना मिलिआ प्रभु आपणा नानक तिन कुरबानु ॥
+माघि सुचे से कांढीअहि जिन पूरा गुरु मिहरवानु ॥१२॥
+
+फलगुणि अनंद उपारजना हरि सजण प्रगटे आइ ॥
+संत सहाई राम के करि किरपा दीआ मिलाइ ॥
+सेज सुहावी सरब सुख हुणि दुखा नाही जाइ ॥
+इछ पुनी वडभागणी वरु पाइआ हरि राइ ॥
+मिलि सहीआ मंगलु गावही गीत गोविंद अलाइ ॥
+हरि जेहा अवरु न दिसई कोई दूजा लवै न लाइ ॥
+हलतु पलतु सवारिओनु निहचल दितीअनु जाइ ॥
+संसार सागर ते रखिअनु बहुड़ि न जनमै धाइ ॥
+जिहवा एक अनेक गुण तरे नानक चरणी पाइ ॥
+फलगुणि नित सलाहीऐ जिस नो तिलु न तमाइ ॥१३॥
+
+जिनि जिनि नामु धिआइआ तिन के काज सरे ॥
+हरि गुरु पूरा आराधिआ दरगह सचि खरे ॥
+सरब सुखा निधि चरण हरि भउजलु बिखमु तरे ॥
+प्रेम भगति तिन पाईआ बिखिआ नाहि जरे ॥
+कूड़ गए दुबिधा नसी पूरन सचि भरे ॥
+पारब्रहमु प्रभु सेवदे मन अंदरि एकु धरे ॥
+माह दिवस मूरत भले जिस कउ नदरि करे ॥
+नानकु मंगै दरस दानु किरपा करहु हरे ॥१४॥१॥
+    </pre>
+</div>
+<hr> 
+<div class="fateh">
+    <pre>वाहिगुरू जी का खालसा
+वाहिगुरू जी की फतेह</pre>
+</div>
+</body>
+</html>

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@800&family=Langar&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+<style>
+    .fateh{
+        font-size: 35px;
+        font-family: 'Baloo Paaji 2', cursive;
+        background-color: black;
+        text-align: center;
+        color:deeppink;
+        border-radius: 300px;
+        border-style:double;
+        border-top-color:fuchsia;
+        border-bottom-color: deepskyblue;
+        border-left-color:darkorange;
+        border-right-color: lawngreen;
+        border-width: 10px;
+        padding: 16px;
+    }
+    .fateh#first{
+        margin-top: 125px;
+    }
+    .pages{
+        font-family: 'Langar', cursive;
+        background-color:navajowhite; 
+        color: red;
+        font-weight: 600;
+        text-align: center;
+        font-size: 30px;
+        border:30px solid transparent;
+        border-image: url(floral.png) 220 repeat;
+    }
+    hr{
+        border-color:crimson;
+        border-style: dotted;
+        border-width: 3px;
+        border-radius: 16px;
+    }
+    .header{
+        border-radius: 0 0 16% 16%;
+        display: flex;
+        flex-direction: row;
+        position: fixed;
+        width:100%;
+        top: 0;
+        left: 0;
+        padding: 16px;
+        padding-left: 7px;
+        background-color: black;
+        font-size: 25px;
+        color: white;
+    }
+    .header a.first{
+        color: white;
+        margin-top: 2.6%;
+        text-decoration: none;
+    }
+    .header a:hover{
+        color: springgreen;
+    }
+    .back{
+        margin-left: 16px;
+        margin-right: 7px;
+    }
+    .header a.first:hover .back{
+        transition: 2s;
+        margin-left: 7px;
+        margin-right: 20px;
+        color: springgreen;
+    }
+    .header code{
+        color:springgreen;
+        margin-left: 195px;
+        margin-right: 195px;
+        font-weight: bold;
+        font-size: 70px;
+    }
+    .header code:hover{
+        animation: headerclr 1.6s ease-in-out infinite;
+    }
+    @keyframes headerclr {
+        0%{color: springgreen;}
+        50%{color: white;}
+        100%{color: springgreen;}
+    }
+    .dropbtn {
+        background-color: ghostwhite;
+        color: seagreen;
+        padding: 12px;
+        font-size:18px;
+        border: none;
+        cursor: pointer;
+    }
+    .dropbtn b{
+        margin-left: 16px;
+    }
+    .dropbtn:hover, .dropbtn:focus {
+        background-color: rgb(68, 182, 118);
+        color: white;
+    }
+    .dropdown { 
+        margin-top: 1.9%;
+        display: inline;
+        margin-right: 30px;
+        position: relative;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    .dropdown a:hover {background-color: #ddd; color: seagreen;}
+    .show {display: block;}
+    @media screen and (max-width: 768px){
+        .header{
+            border-radius: 0 0 20% 20%;
+            text-align: center;
+            flex-direction: column;
+            padding: 5px 0;
+        }
+        .back{
+            margin-left: 0;
+        }
+        .header a.first{
+            font-size: 25px;
+        }
+        .header code{
+            font-size: 35px;
+        }
+        .dropbtn{
+            margin-left: 40px;
+        }
+        .dropdown-content{
+            margin-left: 319px;
+        }
+    }
+    @media screen and (max-width: 600px){
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .fateh{
+            width: 100%;
+            font-size: 17px;
+            border-width: 7px;
+            margin: 7px 3px;
+        }
+        hr{
+            width: 111%;
+            margin: 7px 3px;
+        }
+        .pages{
+            width: 103.5%;
+            margin: 7px 3px;
+            font-size: 13px;
+            border: 16px solid transparent;
+            border-image: url(floral.png) 220 repeat;
+        }
+        .header{
+            border-radius: 0 0 20% 20%;
+            text-align: center;
+            flex-direction: column;
+            padding: 5px 0 !important;
+        }
+        .back{
+            margin-left: 0;
+        }
+        .header a.first{
+            font-size: 25px;
+        }
+        .dropbtn{
+            padding: 7px;
+            margin-left: 40px;
+            font-size: 20px;
+        }
+        .dropdown-content{
+            margin-left: 94px;
+        }
+        .dropdown-content a{
+            text-align: center;
+            padding: 10px;
+        }
+        .header code{
+            margin: 0;
+            margin-top: 2%;
+            font-size: 30px;
+        }
+    }
+</style>
+<title>सोहिला साहिब जी</title>
+</head>
+<body>
+    <div class="header" id="header">
+        <a href="index.htm" class="first"><b class="back"><i class="fa fa-angle-double-left"></i></b>Go Back</a>
+        <code id="hname">सोहिला साहिब जी</code>
+        <div class="dropdown">
+            <i onclick="myFunction()" class="dropbtn fa fa-language"><b>Language</b></i>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="Gsohila sahib.htm">Gurmukhi</a>
+              <a href="#">Hindi</a>
+              <a href="Esohila sahib.htm">English</a>
+            </div>
+        </div>
+        <script>
+            function myFunction() {
+              document.getElementById("myDropdown").classList.toggle("show");
+            }
+            window.onclick = function(event) {
+              if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                  var openDropdown = dropdowns[i];
+                  if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                  }
+                }
+              }
+            }
+        </script>
+    </div>
+    <script>
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+          if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            document.getElementById("header").style.padding = "0px";
+            document.getElementById("header").style.transition = "0.7s all ease-in-out";
+          } else {
+            document.getElementById("header").style.padding = "16px";
+            document.getElementById("header").style.paddingLeft = "7px";
+          }
+        }
+    </script>
+    <div class="fateh" id="first">
+        <pre>वाहिगुरू जी का खालसा
+वाहिगुरू जी की फतेह</pre>
+    </div>
+<hr> 
+<div>
+    <pre class="pages">    
+सोहिला रागु गउड़ी दीपकी महला १
+
+ੴ सतिगुर प्रसादि ॥
+
+जै घरि कीरति आखीऐ करते का होइ बीचारो ॥
+तितु घरि गावहु सोहिला सिवरिहु सिरजणहारो ॥१॥
+तुम गावहु मेरे निरभउ का सोहिला ॥
+हउ वारी जितु सोहिलै सदा सुखु होइ ॥१॥ रहाउ ॥ 
+नित नित जीअड़े समालीअनि देखैगा देवणहारु ॥
+तेरे दानै कीमति ना पवै तिसु दाते कवणु सुमारु ॥२॥
+स्मबति साहा लिखिआ मिलि करि पावहु तेलु ॥
+देहु सजण असीसड़ीआ जिउ होवै साहिब सिउ मेलु ॥३॥
+घरि घरि एहो पाहुचा सदड़े नित पवंनि ॥
+सदणहारा सिमरीऐ नानक से दिह आवंनि ॥४॥१॥
+
+रागु आसा महला १ ॥
+
+छिअ घर छिअ गुर छिअ उपदेस ॥
+गुरु गुरु एको वेस अनेक ॥१॥
+बाबा जै घरि करते कीरति होइ ॥
+सो घरु राखु वडाई तोइ ॥१॥ रहाउ ॥
+विसुए चसिआ घड़ीआ पहरा थिती वारी माहु होआ ॥
+सूरजु एको रुति अनेक ॥
+नानक करते के केते वेस ॥२॥२॥
+
+रागु धनासरी महला १ ॥
+
+गगन मै थालु रवि चंदु दीपक 
+बने तारिका मंडल जनक मोती ॥
+धूपु मलआनलो पवणु चवरो करे 
+सगल बनराइ फूलंत जोती ॥१॥
+कैसी आरती होइ ॥
+भव खंडना तेरी आरती ॥
+अनहता सबद वाजंत भेरी ॥१॥ रहाउ ॥
+सहस तव नैन नन नैन हहि तोहि 
+कउ सहस मूरति नना एक तोही ॥
+सहस पद बिमल नन एक पद गंध 
+बिनु सहस तव गंध इव चलत मोही ॥२॥
+सभ महि जोति जोति है सोइ ॥
+तिस दै चानणि सभ महि चानणु होइ ॥
+गुर साखी जोति परगटु होइ ॥
+जो तिसु भावै सु आरती होइ ॥३॥
+हरि चरण कवल मकरंद लोभित 
+मनो अनदिनो मोहि आही पिआसा ॥
+क्रिपा जलु देहि नानक सारिंग 
+कउ होइ जा ते तेरै नाइ वासा ॥४॥३॥
+
+रागु गउड़ी पूरबी महला ४ ॥
+
+कामि करोधि नगरु बहु 
+भरिआ मिलि साधू खंडल खंडा हे ॥
+पूरबि लिखत लिखे गुरु पाइआ 
+मनि हरि लिव मंडल मंडा हे ॥१॥
+करि साधू अंजुली पुनु वडा हे ॥
+करि डंडउत पुनु वडा हे ॥१॥ रहाउ ॥
+साकत हरि रस सादु न जाणिआ 
+तिन अंतरि हउमै कंडा हे ॥
+जिउ जिउ चलहि चुभै दुखु 
+पावहि जमकालु सहहि सिरि डंडा हे ॥२॥
+हरि जन हरि हरि नामि समाणे 
+दुखु जनम मरण भव खंडा हे ॥
+अबिनासी पुरखु पाइआ परमेसरु 
+बहु सोभ खंड ब्रहमंडा हे ॥३॥
+हम गरीब मसकीन प्रभ तेरे हरि 
+राखु राखु वड वडा हे ॥
+जन नानक नामु अधारु टेक 
+है हरि नामे ही सुखु मंडा हे ॥४॥४॥
+
+रागु गउड़ी पूरबी महला ५ ॥
+
+करउ बेनंती सुणहु मेरे मीता संत टहल की बेला ॥
+ईहा खाटि चलहु हरि लाहा आगै बसनु सुहेला ॥१॥
+अउध घटै दिनसु रैणारे ॥
+मन गुर मिलि काज सवारे ॥१॥ रहाउ ॥
+इहु संसारु बिकारु संसे महि तरिओ ब्रहम गिआनी ॥
+जिसहि जगाइ पीआवै इहु 
+रसु अकथ कथा तिनि जानी ॥२॥
+जा कउ आए सोई बिहाझहु हरि गुर ते मनहि बसेरा ॥
+निज घरि महलु पावहु सुख सहजे बहुरि न होइगो फेरा ॥३॥
+अंतरजामी पुरख बिधाते सरधा मन की पूरे ॥
+    नानक दासु इहै सुखु मागै मो कउ करि संतन की धूरे ॥४॥५॥            
+    </pre>
+</div>
+<hr> 
+<div class="fateh">
+    <pre>वाहिगुरू जी का खालसा
+वाहिगुरू जी की फतेह</pre>
+</div>
+</body>
+</html>

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@800&family=Langar&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+<style>
+    .fateh{
+        font-size: 35px;
+        font-family: 'Baloo Paaji 2', cursive;
+        background-color: black;
+        text-align: center;
+        color:deeppink;
+        border-radius: 300px;
+        border-style:double;
+        border-top-color:fuchsia;
+        border-bottom-color: deepskyblue;
+        border-left-color:darkorange;
+        border-right-color: lawngreen;
+        border-width: 10px;
+        padding: 16px;
+    }
+    .fateh#first{
+        margin-top: 125px;
+    }
+    .pages{
+        font-family: 'Langar', cursive;
+        background-color:navajowhite; 
+        color: red;
+        font-weight: 600;
+        text-align: center;
+        font-size: 30px;
+        border:30px solid transparent;
+        border-image: url(floral.png) 220 repeat;
+    }
+    hr{
+        border-color:crimson;
+        border-style: dotted;
+        border-width: 3px;
+        border-radius: 16px;
+    }
+    .header{
+        border-radius: 0 0 16% 16%;
+        display: flex;
+        flex-direction: row;
+        position: fixed;
+        width:100%;
+        top: 0;
+        left: 0;
+        padding: 16px;
+        padding-left: 7px;
+        background-color: black;
+        font-size: 25px;
+        color: white;
+    }
+    .header a.first{
+        color: white;
+        margin-top: 2.6%;
+        text-decoration: none;
+    }
+    .header a:hover{
+        color: deeppink;
+    }
+    .back{
+        margin-left: 16px;
+        margin-right: 7px;
+    }
+    .header a.first:hover .back{
+        transition: 2s;
+        margin-left: 7px;
+        margin-right: 20px;
+        color: deeppink;
+    }
+    .header code{
+        color: deeppink;
+        margin-left: 310px;
+        margin-right: 310px;
+        font-weight: bold;
+        font-size: 70px;
+    }
+    .header code:hover{
+        animation: headerclr 1.6s ease-in-out infinite;
+    }
+    @keyframes headerclr {
+        0%{color: deeppink;}
+        50%{color: white;}
+        100%{color: deeppink;}
+    }
+    .dropbtn {
+        background-color: ghostwhite;
+        color: deeppink;
+        padding: 12px;
+        font-size:18px;
+        border: none;
+        cursor: pointer;
+    }
+    .dropbtn b{
+        margin-left: 16px;
+    }
+    .dropbtn:hover, .dropbtn:focus {
+        background-color: deeppink;
+        color: white;
+    }
+    .dropdown { 
+        margin-top: 1.9%;
+        display: inline;
+        margin-right: 30px;
+        position: relative;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    .dropdown a:hover {background-color: #ddd;}
+    .show {display: block;}
+    @media screen and (max-width: 768px){
+        .header{
+            border-radius: 0 0 20% 20%;
+            text-align: center;
+            flex-direction: column;
+            padding: 5px 0;
+        }
+        .back{
+            margin-left: 0;
+        }
+        .header a.first{
+            font-size: 25px;
+        }
+        .header code{
+            font-size: 35px;
+        }
+        .dropbtn{
+            margin-left: 40px;
+        }
+        .dropdown-content{
+            margin-left: 319px;
+        }
+    }
+    @media screen and (max-width: 600px){
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .fateh{
+            width: 100%;
+            font-size: 17px;
+            border-width: 7px;
+            margin: 7px 3px;
+        }
+        hr{
+            width: 111%;
+            margin: 7px 3px;
+        }
+        .pages{
+            width: 103.5%;
+            margin: 7px 3px;
+            font-size: 13px;
+            border: 16px solid transparent;
+            border-image: url(floral.png) 220 repeat;
+        }
+        .header{
+            border-radius: 0 0 20% 20%;
+            text-align: center;
+            flex-direction: column;
+            padding: 5px 0 !important;
+        }
+        .back{
+            margin-left: 0;
+        }
+        .header a.first{
+            font-size: 25px;
+        }
+        .dropbtn{
+            padding: 7px;
+            margin-left: 40px;
+            font-size: 20px;
+        }
+        .dropdown-content{
+            margin-left: 94px;
+        }
+        .dropdown-content a{
+            text-align: center;
+            padding: 10px;
+        }
+        .header code{
+            margin: 0;
+            margin-top: 2%;
+            font-size: 30px;
+        }
+    }
+</style>
+<title>ਰਾਗ ਮਾਲਾ</title>
+</head>
+<body>
+    <div class="header" id="header">
+        <a href="index.htm" class="first"><b class="back"><i class="fa fa-angle-double-left"></i></b>Go Back</a>
+        <code id="hname">ਰਾਗ ਮਾਲਾ</code>
+        <div class="dropdown">
+            <i onclick="myFunction()" class="dropbtn fa fa-language"><b>Language</b></i>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="#">Gurmukhi</a>
+              <a href="Hraag mala.htm">Hindi</a>
+              <a href="Eraag mala.htm">English</a>
+            </div>
+        </div>
+        <script>
+            function myFunction() {
+              document.getElementById("myDropdown").classList.toggle("show");
+            }
+            window.onclick = function(event) {
+              if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                  var openDropdown = dropdowns[i];
+                  if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                  }
+                }
+              }
+            }
+        </script>
+    </div>
+    <script>
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+          if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            document.getElementById("header").style.padding = "0px";
+            document.getElementById("header").style.transition = "0.7s all ease-in-out";
+          } else {
+            document.getElementById("header").style.padding = "16px";
+            document.getElementById("header").style.paddingLeft = "7px";
+          }
+        }
+    </script>
+    <div class="fateh" id="first">
+        <pre>ਵਾਹਿਗੁਰੂ  ਜੀ  ਕਾ  ਖਾਲਸਾ
+ਵਾਹਿਗੁਰੂ  ਜੀ  ਕੀ  ਫਤੇਹ</pre>
+    </div>
+    <hr> 
+        <div>
+            <pre class="pages">      
+ਰਾਗ ਮਾਲਾ ॥
+
+ੴ ਸਤਿਗੁਰ ਪ੍ਰਸਾਦਿ ॥
+
+ਰਾਗ ਏਕ ਸੰਗਿ ਪੰਚ ਬਰੰਗਨ ॥
+ਸੰਗਿ ਅਲਾਪਹਿ ਆਠਉ ਨੰਦਨ ॥
+ਪ੍ਰਥਮ ਰਾਗ ਭੈਰਉ ਵੈ ਕਰਹੀ ॥
+ਪੰਚ ਰਾਗਨੀ ਸੰਗਿ ਉਚਰਹੀ ॥
+ਪ੍ਰਥਮ ਭੈਰਵੀ ਬਿਲਾਵਲੀ ॥
+
+ਪੁੰਨਿਆਕੀ ਗਾਵਹਿ ਬੰਗਲੀ ॥
+ਪੁਨਿ ਅਸਲੇਖੀ ਕੀ ਭਈ ਬਾਰੀ ॥
+ਏ ਭੈਰਉ ਕੀ ਪਾਚਉ ਨਾਰੀ ॥
+ਪੰਚਮ ਹਰਖ ਦਿਸਾਖ ਸੁਨਾਵਹਿ ॥
+ਬੰਗਾਲਮ ਮਧੁ ਮਾਧਵ ਗਾਵਹਿ ॥੧॥
+
+ਲਲਤ ਬਿਲਾਵਲ ਗਾਵਹੀ ਅਪੁਨੀ ਅਪੁਨੀ ਭਾਂਤਿ
+ਅਸਟ ਪੁਤ੍ਰ ਭੈਰਵ ਕੇ ਗਾਵਹਿ ਗਾਇਨ ਪਾਤ੍ਰ ॥੧॥
+
+ਦੁਤੀਆ ਮਾਲਕਉਸਕ ਆਲਾਪਹਿ ॥
+ ਸੰਗਿ ਰਾਗਨੀ ਪਾਚਉ ਥਾਪਹਿ ॥
+ਗੋਂਡਕਰੀ ਅਰੁ ਦੇਵਗੰਧਾਰੀ ॥
+ ਗੰਧਾਰੀ ਸੀਹੁਤੀ ਉਚਾਰੀ ॥
+ਧਨਾਸਰੀ ਏ ਪਾਚਉ ਗਾਈ ॥
+ ਮਾਲ ਰਾਗ ਕਉਸਕ ਸੰਗਿ ਲਾਈ ॥
+ਮਾਰੂ ਮਸਤਅੰਗ ਮੇਵਾਰਾ ॥
+ ਪ੍ਰਬਲਚੰਡ ਕਉਸਕ ਉਭਾਰਾ ॥
+ਖਉਖਟ ਅਉ ਭਉਰਾਨਦ ਗਾਏ ॥
+ ਅਸਟ ਮਾਲਕਉਸਕ ਸੰਗਿ ਲਾਏ ॥੧॥
+
+ਪੁਨਿ ਆਇਅਉ ਹਿੰਡੋਲੁ ਪੰਚ ਨਾਰਿ ਸੰਗਿ ਅਸਟ ਸੁਤ ॥
+ਉਠਹਿ ਤਾਨ ਕਲੋਲ ਗਾਇਨ ਤਾਰ ਮਿਲਾਵਹੀ ॥੧॥
+
+ਤੇਲੰਗੀ ਦੇਵਕਰੀ ਆਈ ॥
+ ਬਸੰਤੀ ਸੰਦੂਰ ਸੁਹਾਈ ॥
+ਸਰਸ ਅਹੀਰੀ ਲੈ ਭਾਰਜਾ ॥
+ ਸੰਗਿ ਲਾਈ ਪਾਂਚਉ ਆਰਜਾ ॥
+ਸੁਰਮਾਨੰਦ ਭਾਸਕਰ ਆਏ ॥
+ ਚੰਦ੍ਬਿੰਬ ਮੰਗਲਨ ਸੁਹਾਏ ॥
+
+ਸਰਸਬਾਨ ਅਉ ਆਹਿ ਬਿਨੋਦਾ ॥
+ ਗਾਵਹਿ ਸਰਸ ਬਸੰਤ ਕਮੋਦਾ ॥
+ਅਸਟ ਪੁਤ੍ਰ ਮੈ ਕਹੇ ਸਵਾਰੀ ॥
+ਪੁਨਿ ਆਈ ਦੀਪਕ ਕੀ ਬਾਰੀ ॥੧॥
+
+ਕਛੇਲੀ ਪਟਮੰਜਰੀ ਟੋਡੀ ਕਹੀ ਅਲਾਪਿ ॥
+ਕਾਮੋਦੀ ਅਉ ਗੂਜਰੀ ਸੰਗਿ ਦੀਪਕ ਕੇ ਥਾਪਿ ॥੧॥
+
+ਕਾਲੰਕਾ ਕੁੰਤਲ ਅਉ ਰਾਮਾ ॥
+ ਕਮਲਕੁਸਮ ਚੰਪਕ ਕੇ ਨਾਮਾ ॥
+ਗਉਰਾ ਅਉ ਕਾਨਰਾ ਕਲਿਆਨਾ ॥
+ ਅਸਟ ਪੁਤ੍ਰ ਦੀਪਕ ਕੇ ਜਾਨਾ ॥੧॥
+
+ਸਭ ਮਿਲਿ ਸਿਰੀਰਾਗ ਵੈ ਗਾਵਹ ॥
+ ਪਾਂਚਉ ਸੰਗਿ ਬਰੰਗਨ ਲਾਵਹਿ ॥
+ਬੈਰਾਰੀ ਕਰਨਾਟੀ ਧਰੀ ॥
+ ਗਵਰੀ ਗਾਵਹਿ ਆਸਾਵਰੀ
+ਤਿਹ ਪਾਛੈ ਸਿੰਧਵੀ ਅਲਾਪੀ ॥
+ ਸਿਰੀਰਾਗ ਸਿਉ ਪਾਂਚਉ ਥਾਪੀ ॥੧॥
+
+ਸਾਲੂ ਸਾਰਗ ਸਾਗਰਾ ਅਉਰ ਗੋਂਡ ਗੰਭੀਰ ॥
+ਅਸਟ ਪੁਤ੍ਰ ਸ੍ਰੀਰਾਗ ਕੇ ਗੁੰਡ ਕੁੰਭ ਹਮੀਰ ॥੧॥
+
+ਖਸਟਮ ਮੇਘ ਰਾਗ ਵੈ ਗਾਵਹਿ ॥
+ ਪਾਂਚਉ ਸੰਗਿ ਬਰੰਗਨ ਲਾਵਹਿ ॥
+ਸੋਰਠਿ ਗੋਂਡ ਮਲਾਰੀ ਧੁਨੀ ॥
+ਪੁਨਿ ਗਾਵਹਿ ਆਸਾ ਗੁਨ ਗੁਨੀ ॥
+ਊਚੈ ਸੁਰਿ ਸੂਹਉ ਪੁਨਿ ਕੀਨ ॥
+ ਮੇਘ ਰਾਗ ਸਿਉ ਪਾਚਉ ਚੀਨੀ ॥੧॥
+
+ਬੈਰਾਧਰ ਗਜਧਰ ਕੇਦਾਰਾ ॥
+ ਜਬਲੀਧਰ ਨਟ ਅਉ ਜਲਧਾਰਾ ॥
+ਪੁਨਿ ਗਾਵਹਿ ਸੰਕਰ ਅਉ ਸਿਆਮਾ ॥
+ਮੇਘ ਰਾਗ ਪੁਤ੍ਰਨ ਕੇ ਨਾਮਾ ॥੧॥
+ 
+ਖਸਟ ਰਾਗ ਉਨਿ ਗਾਏ ਸੰਗਿ ਰਾਗਨੀ ਤੀਸ ॥
+              ਸਭੈ ਪੁਤ੍ਰ ਰਾਗੰਨ ਕੇ ਅਠਾਰਹ ਦਸ ਬੀਸ ॥੧॥੧॥                
+            </pre>
+        </div>
+        <hr> 
+        <div class="fateh">
+            <pre>ਵਾਹਿਗੁਰੂ  ਜੀ  ਕਾ  ਖਾਲਸਾ
+    ਵਾਹਿਗੁਰੂ  ਜੀ  ਕੀ  ਫਤੇਹ</pre>
+        </div>
+    </body>
+    </html>

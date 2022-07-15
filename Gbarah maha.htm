@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@800&family=Langar&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+<style>
+    .fateh{
+        font-size: 35px;
+        font-family: 'Baloo Paaji 2', cursive;
+        background-color: black;
+        text-align: center;
+        color:deeppink;
+        border-radius: 300px;
+        border-style:double;
+        border-top-color:fuchsia;
+        border-bottom-color: deepskyblue;
+        border-left-color:darkorange;
+        border-right-color: lawngreen;
+        border-width: 10px;
+        padding: 16px;
+    }
+    .fateh#first{
+        margin-top: 125px;
+    }
+    .pages{
+        font-family: 'Langar', cursive;
+        background-color:navajowhite; 
+        color: red;
+        font-weight: 600;
+        text-align: center;
+        font-size: 30px;
+        border:30px solid transparent;
+        border-image: url(floral.png) 220 repeat;
+    }
+    hr{
+        border-color:crimson;
+        border-style: dotted;
+        border-width: 3px;
+        border-radius: 16px;
+    }
+    .header{
+        border-radius: 0 0 16% 16%;
+        display: flex;
+        flex-direction: row;
+        position: fixed;
+        width:100%;
+        top: 0;
+        left: 0;
+        padding: 16px;
+        padding-left: 7px;
+        background-color: black;
+        font-size: 25px;
+        color: white;
+    }
+    .header a.first{
+        color: white;
+        margin-top: 2.6%;
+        text-decoration: none;
+    }
+    .header a:hover{
+        color: deeppink;
+    }
+    .back{
+        margin-left: 16px;
+        margin-right: 7px;
+    }
+    .header a.first:hover .back{
+        transition: 2s;
+        margin-left: 7px;
+        margin-right: 20px;
+        color: deeppink;
+    }
+    .header code{
+        color: deeppink;
+        margin-left: 290px;
+        margin-right: 290px;
+        font-weight: bold;
+        font-size: 70px;
+    }
+    .header code:hover{
+        animation: headerclr 1.6s ease-in-out infinite;
+    }
+    @keyframes headerclr {
+        0%{color: deeppink;}
+        50%{color: white;}
+        100%{color: deeppink;}
+    }
+    .dropbtn {
+        background-color: ghostwhite;
+        color: deeppink;
+        padding: 12px;
+        font-size:18px;
+        border: none;
+        cursor: pointer;
+    }
+    .dropbtn b{
+        margin-left: 16px;
+    }
+    .dropbtn:hover, .dropbtn:focus {
+        background-color: deeppink;
+        color: white;
+    }
+    .dropdown { 
+        margin-top: 1.9%;
+        display: inline;
+        margin-right: 30px;
+        position: relative;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    .dropdown a:hover {background-color: #ddd;}
+    .show {display: block;}
+    @media screen and (max-width: 768px){
+        .header{
+            border-radius: 0 0 20% 20%;
+            text-align: center;
+            flex-direction: column;
+            padding: 5px 0;
+        }
+        .back{
+            margin-left: 0;
+        }
+        .header a.first{
+            font-size: 25px;
+        }
+        .header code{
+            font-size: 35px;
+        }
+        .dropbtn{
+            margin-left: 40px;
+        }
+        .dropdown-content{
+            margin-left: 319px;
+        }
+    }
+    @media screen and (max-width: 600px){
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .fateh{
+            width: 100%;  
+            font-size: 17px;
+            border-width: 7px;
+            margin: 7px 3px;
+        }
+        hr{
+            width: 111%; 
+            margin: 7px 3px;
+        }
+        .pages{
+            width: 103.5%; 
+            margin: 7px 3px;
+            font-size: 13px;
+            border: 16px solid transparent;
+            border-image: url(floral.png) 220 repeat;
+        }
+        .header{
+            border-radius: 0 0 20% 20%;
+            text-align: center;
+            flex-direction: column;
+            padding: 5px 0 !important;
+        }
+        .back{
+            margin-left: 0;
+        }
+        .header a.first{
+            font-size: 25px;
+        }
+        .dropbtn{
+            padding: 7px;
+            margin-left: 40px;
+            font-size: 20px;
+        }
+        .dropdown-content{
+            margin-left: 94px;
+        }
+        .dropdown-content a{
+            text-align: center;
+            padding: 10px;
+        }
+        .header code{
+            margin: 0;
+            margin-top: 2%;
+            font-size: 30px;
+        }
+    }
+</style>
+<title>ਬਾਰਾਹ ਮਾਹਾ</title>
+</head>
+<body>
+    <div class="header" id="header">
+        <a href="index.htm" class="first"><b class="back"><i class="fa fa-angle-double-left"></i></b>Go Back</a>
+        <code id="hname">ਬਾਰਾਹ ਮਾਹਾ</code>
+        <div class="dropdown">
+            <i onclick="myFunction()" class="dropbtn fa fa-language"><b>Language</b></i>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="#">Gurmukhi</a>
+              <a href="Hbarah maha.htm">Hindi</a>
+              <a href="Ebarah maha.htm">English</a>
+            </div>
+        </div>
+        <script>
+            function myFunction() {
+              document.getElementById("myDropdown").classList.toggle("show");
+            }
+            window.onclick = function(event) {
+              if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                  var openDropdown = dropdowns[i];
+                  if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                  }
+                }
+              }
+            }
+        </script>
+    </div>
+    <script>
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+          if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            document.getElementById("header").style.padding = "0px";
+            document.getElementById("header").style.transition = "0.7s all ease-in-out";
+          } else {
+            document.getElementById("header").style.padding = "16px";
+            document.getElementById("header").style.paddingLeft = "7px";
+          }
+        }
+    </script>
+    <div class="fateh" id="first">
+        <pre>ਵਾਹਿਗੁਰੂ  ਜੀ  ਕਾ  ਖਾਲਸਾ
+ਵਾਹਿਗੁਰੂ  ਜੀ  ਕੀ  ਫਤੇਹ</pre>
+    </div>
+    <hr> 
+        <div>
+            <pre class="pages">      
+ਬਾਰਹ ਮਾਹਾ
+ਬਾਰਹ ਮਾਹਾ ਮਾਂਝ ਮਹਲਾ ੫ ਘਰੁ ੪
+੧ਉਂ ਸਤਿਗੁਰ ਪ੍ਰਸਾਦਿ ॥
+ਕਿਰਤਿ ਕਰਮ ਕੇ ਵੀਛੁੜੇ ਕਰਿ ਕਿਰਪਾ ਮੇਲਹੁ ਰਾਮ ॥
+ਚਾਰਿ ਕੁੰਟ ਦਹ ਦਿਸ ਭ੍ਰਮੇ ਥਕਿ ਆਏ ਪ੍ਰਭ ਕੀ ਸਾਮ ॥
+ਧੇਨੁ ਦੁਧੈ ਤੇ ਬਾਹਰੀ ਕਿਤੈ ਨ ਆਵੈ ਕਾਮ ॥
+ਜਲ ਬਿਨੁ ਸਾਖ ਕੁਮਲਾਵਤੀ ਉਪਜਹਿ ਨਾਹੀ ਦਾਮ ॥
+ਹਰਿ ਨਾਹ ਨ ਮਿਲੀਐ ਸਾਜਨੈ ਕਤ ਪਾਈਐ ਬਿਸਰਾਮ ॥
+ਜਿਤੁ ਘਰਿ ਹਰਿ ਕੰਤੁ ਨ ਪ੍ਰਗਟਈ ਭਠਿ ਨਗਰ ਸੇ ਗ੍ਰਾਮ ॥
+ਸ਼੍ਬ ਸੀਗਾਰ ਤੰਬੋਲ ਰਸ ਸਣੁ ਦੇਹੀ ਸਭ ਖਾਮ ॥
+ਪ੍ਰਭ ਸੁਆਮੀ ਕੰਤ ਵਿਹੂਣੀਆ ਮੀਤ ਸਜਣ ਸਭਿ ਜਾਮ ॥
+ਨਾਨਕ ਕੀ ਬੇਨੈਤੀਆ ਕਰਿ ਕਿਰਪਾ ਦੀਜੈ ਨਾਮੁ ॥
+ਹਰਿ ਮੇਲਹੁ ਸੁਆਮੀ ਸੰਗਿ ਪ੍ਰਭ ਜਿਸ ਕਾ ਨਿਹਚਲ ਧਾਮ ॥੧॥
+
+ਚੇਤਿ ਗੋਵਿੰਦ ਅਰਾਧੀਐ ਹੋਵੈ ਅਨੰਦੁ ਘਣਾ ॥
+ਸੰਤ ਜਨਾ ਮਿਲਿ ਪਾਈਐ ਰਸਨਾ ਨਾਮੁ ਭਣਾ ॥
+ਜਿਨਿ ਪਾਇਆ ਪ੍ਰਭੁ ਆਪਣਾ ਆਏ ਤਿਸਹਿ ਗਣਾ ॥
+ਇਕੁ ਖਿਨੁ ਤਿਸੁ ਬਿਨੁ ਜੀਵਣਾ ਬਿਰਥਾ ਜਨਮੁ ਜਣਾ ॥
+ਜਲਿ ਥਲਿ ਮਹੀਅਲਿ ਪੂਰਿਆ ਰਵਿਆ ਵਿਚਿ ਵਣਾ ॥
+ਸੋ ਪ੍ਰਭੁ ਚਿਤਿ ਨ ਆਵਈ ਕਿਤੜਾ ਦੁਖੁ ਗਣਾ ॥
+ਜਿਨੀ ਰਾਵਿਆ ਸੋ ਪ੍ਰਭੂ ਤਿੰਨਾ ਭਾਗੁ ਮਣਾ ॥
+ਹਰਿ ਦਰਸਨ ਕੌਉ ਮਨੁ ਲੋਚਦਾ ਨਾਨਕ ਪਿਆਸ ਮਨਾ ॥
+ਚੇਤਿ ਮਿਲਾਏ ਸੋ ਪ੍ਰਭੂ ਤਿਸ ਕੈ ਪਾਇ ਲਗਾ ॥੨॥
+
+ਵੈਸਾਖਿ ਧੀਰਨਿ ਕਿਉ ਵਾਢੀਆ ਜਿਨਾ ਪ੍ਰੇਮ ਬਿਛੋਹੁ ॥
+ਹਰਿ ਸਾਜਨੁ ਪੁਰਖੁ ਵਿਸਾਰਿ ਕੈ ਲਗੀ ਮਾਇਆ ਧੋਹ ॥
+ਪੁਤ੍ਰ ਕਲਤ੍ਰ ਨ ਸੰਗਿ ਧਨਾ ਹਰਿ ਅਵਿਨਾਸੀ ਓਹੁ ॥
+ਪਲਚਿ ਪਲਚਿ ਸਗਲੀ ਮੁਈ ਝੂਠੈ ਧੰਧੈ ਮੋਹੁ ॥
+ਇਕਸੁ ਹਰਿ ਕੇ ਨਾਮ ਬਿਨੁ ਅਗੈ ਲਈਅਹਿ ਖੋਹਿ ॥
+ਦਯੁ ਵਿਸਾਰਿ ਵਿਗੁਚਣਾ ਪ੍ਰਭ ਬਿਨੁ ਅਵਰ ਨ ਕੋਇ ॥
+ਪ੍ਰੀਤਮ ਚਰਣੀ ਜੋ ਲਗੇ ਤਿਨ ਕੀ ਨਿਰਮਲ ਸੋਇ ॥
+ਨਾਨਕ ਕੀ ਪ੍ਰਭ ਬੇਨਤੀ ਪ੍ਰਭ ਮਿਲਹੁ ਪਰਾਪਤਿ ਹੋਇ ॥
+ਵੈਸਾਖੁ ਸੁਹਾਵਾ ਤਾਂ ਲਗੈ ਜਾ ਸੰਤੁ ਭੇਟੈ ਹਰਿ ਸੋਇ ॥੩॥
+
+ਹਰਿ ਜੇਠਿ ਜੁੜੰਦਾ ਲੋੜੀਐ ਜਿਸੁ ਅਗੈ ਸਭਿ ਨਿਵੰਨਿ ॥
+ਹਰਿ ਸਜਣ ਦਾਵਣਿ ਲਗਿਆ ਕਿਸੈ ਨ ਦੇਈ ਬੰਨਿ ॥
+ਮਾਣਕ ਮੋਤੀ ਨਾਮੁ ਪ੍ਰਭ ਉਨ ਲਗੈ ਨਾਹੀ ਸੰਨਿ ॥
+ਰੰਗ ਸਭੇ ਨਾਰਾਇਣੈ ਜੇਤੇ ਮਨਿ ਭਾਵੰਨਿ ॥
+ਜੋ ਹਰਿ ਲੋੜੇ ਸੋ ਕਰੇ ਸੋਈ ਜੀਅ ਕਰੰਨਿ ॥
+ਜੋ ਪ੍ਰਭਿ ਕੀਤੇ ਆਪਣੇ ਸੇਈ ਕਹੀਅਹਿ ਧੰਨਿ ॥
+ਆਪਣ ਲੀਆ ਜੇ ਮਿਲੈ ਵਿਛੁੜਿ ਕਿਉ ਰੋਵੰਨਿ ॥
+ਸਾਧੂ ਸੰਗੁ ਪਰਾਪਤੇ ਨਾਨਕ ਰੰਗ ਮਾਣੰਨਿ ॥
+ਹਰਿ ਜੇਨੁ ਰੰਗੀਲਾ ਤਿਸੁ ਧਣੀ ਜਿਸ ਕੈ ਭਾਗੁ ਮਥੰਨਿ ॥੪॥
+
+ਆਸਾੜੁ ਤਪੰਦਾ ਤਿਸੁ ਲਗੈ ਹਰਿ ਨਾਹੁ ਨ ਜਿੰਨਾ ਪਾਸਿ ॥
+ਜਗਜੀਵਨ ਪੁਰਖੁ ਤਿਆਗਿ ਕੈ ਮਾਣਸ ਸੰਦੀ ਆਸ ॥
+ਦੁਯੈ ਭਾਇ ਵਿਗੁਚੀਐ ਗਲਿ ਪਈਸੁ ਜਮ ਕੀ ਫਾਸ ॥
+ਜੇਹਾ ਬੀਜੈ ਸੋ ਲੁਣੈ ਮਥੈ ਜੋ ਲਿਖਿਆਸੁ ॥
+ਰੈਣਿ ਵਿਹਾਣੀ ਪਛੁਤਾਣੀ ਉਠਿ ਚਲੀ ਗਈ ਨਿਰਾਸ ॥
+ਜਿਨ ਕੌ ਸਾਧੂ ਭੇਟੀਐ ਸੋ ਦਰਗਹ ਹੋਇ ਖਲਾਸੁ ॥
+ਕਰਿ ਕਿਰਪਾ ਪ੍ਰਭ ਆਪਣੀ ਤੇਰੇ ਦਰਸਨ ਹੋਇ ਪਿਆਸ ॥
+ਪ੍ਰਭ ਤੁਧੁ ਬਿਨੁ ਦੂਜਾ ਕੋ ਨਹੀ ਨਾਨਕ ਕੀ ਅਰਦਾਸਿ ॥
+ਆਸਾੜੁ ਸੁਹੰਦਾ ਤਿਸੁ ਲਗੈ ਜਿਸੁ ਮਨਿ ਹਰਿ ਚਰਣ ਨਿਵਾਸ ॥੫॥
+
+ਸਾਵਣਿ ਸਰਸੀ ਕਾਮਣੀ ਚਰਨ ਕਮਲ ਸਿਉ ਪਿਆਰੁ ॥
+ਮਨੁ ਤਨੁ ਰਤਾ ਸਚ ਰੰਗਿ ਇਕੋ ਨਾਮੁ ਅਧਾਰ ॥
+ਬਿਖਿਆ ਰੰਗ ਕੂੜਾਵਿਆ ਦਿਸਨਿ ਸਭੇ ਛਾਰੁ ॥
+ਹਰਿ ਅੰਮ੍ਰਿਤ ਬੂੰਦ ਸੁਹਾਵਣੀ ਮਿਲਿ ਸਾਧੂ ਪੀਵਣਹਾਰੁ ॥
+ਵਲੁ ਤਿਲੁ ਪ੍ਰਭ ਸੰਗਿ ਮਉਲਿਆ ਸੰਮ੍ਰਥ ਪੁਰਖ ਅਪਾਰੁ ॥
+ਹਰਿ ਮਿਲਣੈ ਨੋ ਮਨੁ ਲੋਚਦਾ ਕਰਮਿ ਮਿਲਾਵਣਹਾਰ ॥
+ਜਿਨੀ ਸਖੀਏ ਪ੍ਰਭੁ ਪਾਇਆ ਹੰਉ ਤਿਨ ਕੈ ਸਦ ਬਲਿਹਾਰ ॥
+ਨਾਨਕ ਹਰਿ ਜੀ ਮਇਆ ਕਰਿ ਸਬਦਿ ਸਵਾਰਣਹਾਰ ॥
+ਸਾਵਣੁ ਤਿਨਾ ਸੁਹਾਗਣੀ ਜਿਨ ਰਾਮ ਨਾਮੁ ਉਰਿ ਹਾਰੁ ॥੬॥
+
+ਭਾਦੁਇ ਭਰਮਿ ਭੁਲਾਣੀਆ ਦੂਜੈ ਲਗਾ ਹੇਤੁ ॥
+ਲਖ ਸੀਗਾਰ ਬਣਾਇਆ ਕਾਰਜਿ ਨਾਹੀ ਕੇਤੁ ॥
+ਜਿਤੁ ਦਿਨਿ ਦੇਹ ਬਿਨਸਸੀ ਤਿਤੁ ਵੇਲੈ ਕਹਸਨਿ ਪ੍ਰੇਤੁ ॥
+ਪਕੜਿ ਚਲਾਇਨਿ ਦੂਤ ਜਮ ਕਿਸੈ ਨ ਦੇਨੀ ਭੇਤੁ ॥
+ਛਡਿ ਖੜੋਤੇ ਖਿਨੈ ਮਾਹਿ ਜਿਨ ਸਿਉ ਲਗਾ ਹੇਤੁ ॥
+ਹਥ ਮਰੋਂੜੈ ਤਨੁ ਕਪੇ ਸਿਆਹਹੁ ਹੋਆ ਸੇਤੁ ॥
+ਜੇਹਾ ਬੀਜੈ ਸੋ ਲੁੜੈ ਕਰਮਾ ਸੰਦੜਾ ਖੇਤੁ ॥
+ਨਾਨਕ ਪ੍ਰਭ ਸਰਣਾਗਤੀ ਜ਼ਰਣ ਬੋਹਿਥ ਪ੍ਰਭ ਦੇਤੁ ॥
+ਸੇ ਭਾਦਇ ਨਰਕਿ ਨ ਪਾਈਅਹਿ ਗੁਰੁ ਰਖਣ ਵਾਲਾ ਹੇਤੁ ॥੭॥
+
+ਅਸੁਨਿ ਪ੍ਰੇਮ ਉਮਾਹੜਾ ਕਿਉ ਮਿਲੀਐ ਹਰਿ ਜਾਇ ॥
+ਮਨਿ ਤਨਿ ਪਿਆਸ ਦਰਸਨ ਘਣੀ ਕੋਈ ਆਣਿ ਮਿਲਾਵੈ ਮਾਇ ॥
+ਸੰਤ ਸਹਾਈ ਪ੍ਰੇਮ ਕੇ ਹਉ ਤਿਨ ਕੈ ਲਾਗਾ ਪਾਇ ॥
+ਵਿਣੁ ਪ੍ਰਭ ਕਿਉ ਸੁਖੁ ਪਾਈਐ ਦੂਜੀ ਨਾਹੀ ਜਾਇ ॥
+ਜਿੰਨ੍ਹੀ ਚਾਖਿਆ ਪ੍ਰੇਮ ਰਸੁ ਸੇ ਤ੍ਰਿਪਤਿ ਰਹੇ ਆਘਾਇ ॥
+ਆਪੁ ਤਿਆਗਿ ਬਿਨਤੀ ਕਰਹਿ ਲੇਹੁ ਪ੍ਰਭੂ ਲੜਿ ਲਾਇ ॥
+ਜੋ ਹਰਿ ਕੰਤਿ ਮਿਲਾਈਆ ਸਿ ਵਿਛੁੜਿ ਕਤਹਿ ਨ ਜਾਇ ॥
+ਪ੍ਰਭ ਵਿਣੁ ਦੂਜਾ ਕੋ ਨਹੀ ਨਾਨਕ ਹਰਿ ਸਰਣਾਇ ॥
+ਅਸੂ ਸੁਖੀ ਵਸੰਦੀਆ ਜਿਨਾ ਮਇਆ ਹਰਿ ਰਾਇ ॥੮॥
+ 
+ਕਤਿਕਿ ਕਰਮ ਕਮਾਵਣੇ ਦੇਸੁ ਨ ਕਾਹੂ ਜੋਗੁ ॥
+ਪਰਮੇਸਰ ਤੇ ਕੁਲਿਆਂ ਵਿਆਪਨਿ ਸਭੇ ਰੋਗ ॥
+ਵੇਮੁਖ ਹੋਏ ਫਾਮ ਤੇ ਲਗਨਿ ਜਨਮ ਵਿਜੋਗ ॥
+ਖਿਨ ਮਹਿ ਕਉੜੇ ਹੋਇ ਗਏ ਜਿਤੜੇ ਮਾਇਆ ਭੋਗ ॥
+ਵਿਚ ਨ ਕੋਈ ਕਰਿ ਸਕੈ ਕਿਸ ਥੈ ਰੋਵਹਿ ਰੋਜ ॥
+ਕੀਤਾ ਕਿਛੂ ਨ ਹੋਵਈ ਲਿਖਿਆ ਧੁਰਿ ਸੰਜੋਗ ॥
+ਵਡਭਾਗੀ ਮੇਰਾ ਪ੍ਰਭੁ ਮਿਲੈ ਤਾਂ ਉਤਰਹਿ ਸਭਿ ਬਿਓਗ ॥
+ਨਾਨਕ ਕਉ ਪ੍ਰਭ ਰਾਖਿ ਲੇਹਿ ਮੇਰੇ ਸਾਹਿਬ ਬੰਦੀ ਮੋਚ ॥
+ਕਤਿਕ ਹੋਵੈ ਸਾਧਸੰਗੁ ਸ਼ਿਨਸਹਿ ਸਭੇ ਸੋਚ ॥੯॥
+
+ਮੰਘਿਰਿ ਮਾਹਿ ਸੋਹੰਦੀਆ ਹਰਿ ਪਿਰ ਸੰਗਿ ਬੈਠੜੀਆਹ ॥
+ਤਿਨ ਕੀ ਸੋਭਾ ਕਿਆ ਗੜੀ ਜਿ ਸਾਹਿਬਿ ਮੇਲੜੀਆਹ ॥
+ਤਨੁ ਮਨੁ ਮਉਲਿਆ ਰਾਮ ਸਿਉ ਸੰਗਿ ਸਾਧ ਸਹੇਲੜੀਆਹ ॥
+ਸਾਧ ਜਨਾ ਤੇ ਬਾਹਰੀ ਸੇ ਰਹਨਿ ਇਕੇਲੜੀਆਹ ॥
+ਤਿਨ ਦੁਖੁ ਨ ਕਬਹੂ ਉਤਰੈ ਸੇ ਜਮ ਕੈ ਵਸਿ ਪੜੀਆਹ ॥
+ਜਿਨੀ ਰਾਵਿਆ ਪ੍ਰਭੁ ਆਪਣਾ ਸੇ ਦਿਸਨਿ ਨਿਤ ਖੜੀਆਹ ॥
+ਰਤਨ ਜਵੇਹਰ ਲਾਲ ਹਰਿ ਕੰਠਿ ਤਿਨਾ ਜੜੀਆਹ ॥
+ਨਾਨਕ ਬਾਂਛੇ ਧੂੜਿ ਤਿਨ ਪ੍ਰਭ ਸਰਣੀ ਦਰਿ ਪੜੀਆਹ ॥
+ਮੰਘਿਰਿ ਪ੍ਰਭੁ ਆਰਾਧਣਾ ਬਹੁੜਿ ਨ ਜਨਮੜੀਆਹ ॥੧੦॥
+
+ਪੋਖਿ ਤੁਖਾਰੁ ਨ ਵਿਆਪਈ ਕੰਠਿ ਮਿਲਿਆ ਹਰਿ ਨਾਹੁ ॥
+ਮਨੁ ਬੇਧਿਆ ਚਰਨਾਰਬਿੰਦ ਦਰਸਨਿ ਲਗੜਾ ਸਾਹੁ ॥
+ਓਟ ਗੋਵਿੰਦ ਗੋਪਾਲ ਰਾਇ ਸੇਵਾ ਸੁਆਮੀ ਲਾਹੁ ॥
+ਬਿਖਿਆ ਪੋਹਿ ਨ ਸਕਈ ਮਿਲਿ ਸਾਧੂ ਗੁਣ ਗਾਹੁ ॥
+ਜਹ ਤੇ ਉਪਜੀ ਤਹ ਮਿਲੀ ਸਚੀ ਪ੍ਰੀਤਿ ਸਮਾਹੁ ॥
+ਕਰੁ ਗਹਿ ਲੀਨੀ ਪਾਰਬ੍ਰਹਮਿ ਬਹੁੜਿ ਨ ਵਿਛੁੜੀਆਹੁ ॥
+ਬਾਰਿ ਜਾਉ ਲਖ ਬੇਰੀਆ ਹਰਿ ਸਜਣੁ ਅਗਮ ਅਗਾਹੁ ॥
+ਸਰਮ ਪਈ ਨਾਰਾਇਣੈ ਨਾਨਕ ਦਰਿ ਪਈਆਹੁ ॥
+ਪੋਖੁ ਸੋੋਹੰਦਾ ਸਰਬ ਸੁਖ ਜਿਸੁ ਬਖਸੇ ਵੇਪਰਵਾਹੁ ॥੧੧॥
+
+ਮਾਘਿ ਮਜਨੁ ਸੰਗਿ ਸਾਧੂਆ ਧੂੜੀ ਕਰਿ ਇਸਨਾਨੁ ॥
+ਹਰਿ ਕਾ ਨਾਮੁ ਧਿਆਇ ਸੁਣਿ ਸਭਨਾ ਨੇ ਕਰਿ ਦਾਨੁ ॥
+ਜਨਮ ਕਰਮ ਮਲੁ ਉਤਰੈ ਮਨ ਤੇ ਜਾਇ ਗੁਮਾਨੁ ॥
+ਕਾਮਿ ਕਰੋਧਿ ਨ ਮੋਹੀਐ ਬਿਨਸੈ ਲੋਭੁ ਸੁਆਨੁ ॥
+ਸਚੈ ਮਾਰਗਿ ਚਲਦਿਆ ਉਸਤਤਿ ਕਰੇ ਜਹਾਨੁ ॥
+ਅਠਸਠਿ ਤੀਰਥ ਸਗਲ ਪੁੰਨ ਜੀਅ ਦਇਆ ਪਰਵਾਨੁ ॥
+ਜਿਸ ਨੋ ਦੇਵੈ ਦਇਆ ਕਰਿ ਸੋਈ ਪੁਰਖੁ ਸੁਜਾਨ ॥
+ਜਿਨਾ ਮਿਲਿਆ ਪ੍ਰਭੁ ਆਪਣਾ ਨਾਨਕ ਤਿਨ ਕੁਰਬਾਨੁ ॥
+ਮਾਘਿ ਸੁਚੇ ਸੇ ਕਾਂਢੀਅਹਿ ਜਿਨ ਪੂਰਾ ਗੁਰੁ ਮਿਹਰਵਾਨੁ ॥੧੨॥
+
+ਫਲਗੁਣਿ ਅਨੰਦ ਉਪਾਰਜਨਾ ਹਰਿ ਸਜਣ ਪ੍ਰਗਟੇ ਆਇ ॥
+ਸੰਤ ਸਹਾਈ ਰਾਮ ਕੇ ਕਰਿ ਕਿਰਪਾ ਦੀਆ ਮਿਲਾਇ ॥
+ਸੇਜ ਸੁਹਾਵੀ ਸਰਬ ਸੁਖ ਹੁਣਿ ਦੁਖਾ ਨਾਹੀ ਜਾਇ ॥
+ਇਛ ਪੁਨੀ ਵਡਭਾਗਣੀ ਵਰੁ ਪਾਇਆ ਹਰਿ ਰਾਇ ॥
+ਮਿਲਿ ਸਹੀਆ ਮੰਗਲੁ ਗਾਵਹੀ ਗੀਤ ਗੋਵਿੰਦ ਅਲਾਇ ॥
+ਹਰਿ ਜੇਹਾ ਅਵਰੁ ਨ ਦਿਸਈ ਕੋਈ ਦੂਜਾ ਲਵੈ ਨ ਲਾਇ ॥
+ਹਲਤੁ ਪਲਤੁ ਸਵਾਰਿਓਨੁ ਨਿਹਚਲ ਦਿਤੀਅਨੁ ਜਾਇ ॥
+ਸੰਸਾਰ ਸਾਗਰ ਤੇ ਰਖਿਅਨੁ ਬਹੁੜਿ ਨ ਜਨਮੈ ਧਾਇ ॥
+ਜਿਹਵਾ ਏਕ ਅਨੇਕ ਗੁਣ ਤਰੇ ਨਾਨਕ ਚਰਣੀ ਪਾਇ ॥
+ਫਲਗੁਣਿ ਨਿਤ ਸਲਾਹੀਐ ਜਿਸ ਨੋ ਤਿਲੁ ਨ ਤਮਾਇ ॥੧੩॥
+
+ਜਿਨਿ ਜਿਨਿ ਨਾਮੁ ਧਿਆਇਆ ਤਿਨ ਕੇ ਕਾਜ ਸਰੇ ॥
+ਹਰਿ ਗੁਰੁ ਪੂਰਾ ਆਰਾਧਿਆ ਦਰਗਹ ਸਚਿ ਖਰੇ ॥
+ਸਰਬ ਸੁਖਾ ਨਿਧਿ ਚਰਣ ਹਰਿ ਭਉਜਲੁ ਬਿਖਮੁ ਤਰੇ ॥
+ਪ੍ਰੇਮ ਭਗਤਿ ਤਿਨ ਪਾਈਆ ਬਿਖਿਆ ਨਾਹਿ ਜਰੇ ॥
+ਕੂੜ ਗਏ ਦੁਬਿਧਾ ਨਸੀ ਪੂਰਨ ਸਚਿ ਭਰੇ ॥
+ਪਾਰਬ੍ਰਹਮੁ ਪ੍ਰਭੁ ਸੇਵਦੇ ਮਨ ਅੰਦਰਿ ਏਕੁ ਧਰੇ ॥
+ਮਾਹ ਦਿਵਸ ਮੂਰਤ ਭਲੇ ਜਿਸ ਕਉ ਨਦਰਿ ਕਰੇ ॥
+ਨਾਨਕੁ ਮੰਗੈ ਦਰਸ ਦਾਨੁ ਕਿਰਪਾ ਕਰਹੁ ਹਰੇ ॥੧੪॥੧॥
+            </pre>
+        </div>
+        <hr> 
+        <div class="fateh">
+            <pre>ਵਾਹਿਗੁਰੂ  ਜੀ  ਕਾ  ਖਾਲਸਾ
+    ਵਾਹਿਗੁਰੂ  ਜੀ  ਕੀ  ਫਤੇਹ</pre>
+        </div>
+    </body>
+    </html>

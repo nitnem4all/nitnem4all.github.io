@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@800&family=Langar&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+<style>
+    .fateh{
+        font-size: 35px;
+        font-family: 'Baloo Paaji 2', cursive;
+        background-color: black;
+        text-align: center;
+        color:deeppink;
+        border-radius: 300px;
+        border-style:double;
+        border-top-color:fuchsia;
+        border-bottom-color: deepskyblue;
+        border-left-color:darkorange;
+        border-right-color: lawngreen;
+        border-width: 10px;
+        padding: 16px;
+    }
+    .fateh#first{
+        margin-top: 125px;
+    }
+    .pages{
+        font-family: 'Langar', cursive;
+        background-color:navajowhite; 
+        color: red;
+        font-weight: 600;
+        text-align: center;
+        font-size: 30px;
+        border:30px solid transparent;
+        border-image: url(floral.png) 220 repeat;
+    }
+    hr{
+        border-color:crimson;
+        border-style: dotted;
+        border-width: 3px;
+        border-radius: 16px;
+    }
+    .header{
+        border-radius: 0 0 16% 16%;
+        display: flex;
+        flex-direction: row;
+        position: fixed;
+        width:100%;
+        top: 0;
+        left: 0;
+        padding: 16px;
+        padding-left: 7px;
+        background-color: black;
+        font-size: 25px;
+        color: white;
+    }
+    .header a.first{
+        color: white;
+        margin-top: 2.6%;
+        text-decoration: none;
+    }
+    .header a:hover{
+        color: deeppink;
+    }
+    .back{
+        margin-left: 16px;
+        margin-right: 7px;
+    }
+    .header a.first:hover .back{
+        transition: 2s;
+        margin-left: 7px;
+        margin-right: 20px;
+        color: deeppink;
+    }
+    .header code{
+        color: deeppink;
+        margin-left: 220px;
+        margin-right: 220px;
+        font-weight: bold;
+        font-size: 70px;
+    }
+    .header code:hover{
+        animation: headerclr 1.6s ease-in-out infinite;
+    }
+    @keyframes headerclr {
+        0%{color: deeppink;}
+        50%{color: white;}
+        100%{color: deeppink;}
+    }
+    .dropbtn {
+        background-color: ghostwhite;
+        color: deeppink;
+        padding: 12px;
+        font-size:18px;
+        border: none;
+        cursor: pointer;
+    }
+    .dropbtn b{
+        margin-left: 16px;
+    }
+    .dropbtn:hover, .dropbtn:focus {
+        background-color: deeppink;
+        color: white;
+    }
+    .dropdown { 
+        margin-top: 1.9%;
+        display: inline;
+        margin-right: 30px;
+        position: relative;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    .dropdown a:hover {background-color: #ddd;}
+    .show {display: block;}
+    @media screen and (max-width: 768px){
+        .header{
+            border-radius: 0 0 20% 20%;
+            text-align: center;
+            flex-direction: column;
+            padding: 5px 0;
+        }
+        .back{
+            margin-left: 0;
+        }
+        .header a.first{
+            font-size: 25px;
+        }
+        .header code{
+            font-size: 35px;
+        }
+        .dropbtn{
+            margin-left: 40px;
+        }
+        .dropdown-content{
+            margin-left: 319px;
+        }
+    }
+    @media screen and (max-width: 600px){
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .fateh{
+            width: 100%;
+            font-size: 17px;
+            border-width: 7px;
+            margin: 7px 3px;
+        }
+        hr{
+            width: 111%;
+            margin: 7px 3px;
+        }
+        .pages{
+            width: 103.5%;
+            margin: 7px 3px;
+            font-size: 13px;
+            border: 16px solid transparent;
+            border-image: url(floral.png) 220 repeat;
+        }
+        .header{
+            border-radius: 0 0 20% 20%;
+            text-align: center;
+            flex-direction: column;
+            padding: 5px 0 !important;
+        }
+        .back{
+            margin-left: 0;
+        }
+        .header a.first{
+            font-size: 25px;
+        }
+        .dropbtn{
+            padding: 7px;
+            margin-left: 40px;
+            font-size: 20px;
+        }
+        .dropdown-content{
+            margin-left: 94px;
+        }
+        .dropdown-content a{
+            text-align: center;
+            padding: 10px;
+        }
+        .header code{
+            margin: 0;
+            margin-top: 2%;
+            font-size: 30px;
+        }
+    }
+</style>
+<title>ਚੌਪਈ ਸਾਹਿਬ ਜੀ</title>
+</head>
+<body>
+    <div class="header" id="header">
+        <a href="index.htm" class="first"><b class="back"><i class="fa fa-angle-double-left"></i></b>Go Back</a>
+        <code id="hname">ਚੌਪਈ ਸਾਹਿਬ ਜੀ</code>
+        <div class="dropdown">
+            <i onclick="myFunction()" class="dropbtn fa fa-language"><b>Language</b></i>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="#">Gurmukhi</a>
+              <a href="Hchoupai sahib.htm">Hindi</a>
+              <a href="Echoupai sahib.htm">English</a>
+            </div>
+        </div>
+        <script>
+            function myFunction() {
+              document.getElementById("myDropdown").classList.toggle("show");
+            }
+            window.onclick = function(event) {
+              if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                  var openDropdown = dropdowns[i];
+                  if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                  }
+                }
+              }
+            }
+        </script>
+    </div>
+    <script>
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+          if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            document.getElementById("header").style.padding = "0px";
+            document.getElementById("header").style.transition = "0.7s all ease-in-out";
+          } else {
+            document.getElementById("header").style.padding = "16px";
+            document.getElementById("header").style.paddingLeft = "7px";
+          }
+        }
+    </script>
+    <div class="fateh" id="first">
+        <pre>ਵਾਹਿਗੁਰੂ  ਜੀ  ਕਾ  ਖਾਲਸਾ
+ਵਾਹਿਗੁਰੂ  ਜੀ  ਕੀ  ਫਤੇਹ</pre>
+    </div>
+    <hr> 
+        <div>
+            <pre class="pages">
+ਕਬ੍ਯੋ ਬਾਚ ਬੇਨਤੀ ॥
+
+ਚੌਪਈ ॥
+
+ਹਮਰੀ ਕਰੋ ਹਾਥ ਦੈ ਰਛਾ ॥
+ਪੂਰਨ ਹੋਇ ਚਿਤ ਕੀ ਇਛਾ ॥
+ਤਵ ਚਰਨਨ ਮਨ ਰਹੈ ਹਮਾਰਾ ॥
+ਅਪਨਾ ਜਾਨ ਕਰੋ ਪ੍ਰਤਿਪਾਰਾ ॥੩੭੭॥
+
+ਹਮਰੇ ਦੁਸਟ ਸਭੈ ਤੁਮ ਘਾਵਹੁ ॥
+ਆਪੁ ਹਾਥ ਦੈ ਮੋਹਿ ਬਚਾਵਹੁ ॥
+ਸੁਖੀ ਬਸੈ ਮੋਰੋ ਪਰਿਵਾਰਾ ॥
+ਸੇਵਕ ਸਿਖ੍ਯ ਸਭੈ ਕਰਤਾਰਾ ॥੩੭੮॥
+ 
+ਮੋ ਰਛਾ ਨਿਜੁ ਕਰ ਦੈ ਕਰਿਯੈ ॥
+ਸਭ ਬੈਰਿਨ ਕੌ ਆਜ ਸੰਘਰਿਯੈ ॥
+ਪੂਰਨ ਹੋਇ ਹਮਾਰੀ ਆਸਾ ॥
+ਤੋਰਿ ਭਜਨ ਕੀ ਰਹੈ ਪਿਯਾਸਾ ॥੩੭੯॥
+
+ਤੁਮਹਿ ਛਾਡਿ ਕੋਈ ਅਵਰ ਨ ਧ੍ਯਾਊ ॥
+ਜੋ ਬਰ ਚਾਹੌ ਸੁ ਤੁਮ ਤੇ ਪਾਊ ॥
+ਸੇਵਕ ਸਿਖ੍ਯ ਹਮਾਰੇ ਤਾਰਿਯਹਿ ॥
+ਚੁਨ ਚੁਨ ਸਤ੍ਰੁ ਹਮਾਰੇ ਮਾਰਿਯਹਿ ॥੩੮੦॥
+
+ਆਪੁ ਹਾਥ ਦੈ ਮੁਝੈ ਉਬਰਿਯੈ ॥
+ਮਰਨ ਕਾਲ ਕਾ ਤ੍ਰਾਸ ਨਿਵਰਿਯੈ ॥
+ਹੂਜੋ ਸਦਾ ਹਮਾਰੇ ਪਛਾ ॥
+ਸ੍ਰੀ ਅਸਿਧੁਜ ਜੂ ਕਰਿਯਹੁ ਰਛਾ ॥੩੮੧॥
+
+ਰਾਖਿ ਲੇਹੁ ਮੁਹਿ ਰਾਖਨਹਾਰੇ ॥
+ਸਾਹਿਬ ਸੰਤ ਸਹਾਇ ਪਿਯਾਰੇ ॥
+ਦੀਨਬੰਧੁ ਦੁਸਟਨ ਕੇ ਹੰਤਾ ॥
+ਤੁਮ ਹੋ ਪੁਰੀ ਚਤੁਰਦਸ ਕੰਤਾ ॥੩੮੨॥
+
+ਕਾਲ ਪਾਇ ਬ੍ਰਹਮਾ ਬਪੁ ਧਰਾ ॥
+ਕਾਲ ਪਾਇ ਸਿਵ ਜੂ ਅਵਤਰਾ ॥
+ਕਾਲ ਪਾਇ ਕਰਿ ਬਿਸਨ ਪ੍ਰਕਾਸਾ ॥
+ਸਕਲ ਕਾਲ ਕਾ ਕੀਯਾ ਤਮਾਸਾ ॥੩੮੩॥
+
+ਜਵਨ ਕਾਲ ਜੋਗੀ ਸਿਵ ਕੀਯੋ ॥
+ਬੇਦ ਰਾਜ ਬ੍ਰਹਮਾ ਜੂ ਥੀਯੋ ॥
+ਜਵਨ ਕਾਲ ਸਭ ਲੋਕ ਸਵਾਰਾ ॥
+ਨਮਸਕਾਰ ਹੈ ਤਾਹਿ ਹਮਾਰਾ ॥੩੮੪॥
+
+ਜਵਨ ਕਾਲ ਸਭ ਜਗਤ ਬਨਾਯੋ ॥
+ਦੇਵ ਦੈਤ ਜਛਨ ਉਪਜਾਯੋ ॥
+ਆਦਿ ਅੰਤਿ ਏਕੈ ਅਵਤਾਰਾ ॥
+ਸੋਈ ਗੁਰੂ ਸਮਝਿਯਹੁ ਹਮਾਰਾ ॥੩੮੫॥
+
+ਨਮਸਕਾਰ ਤਿਸ ਹੀ ਕੋ ਹਮਾਰੀ ॥
+ਸਕਲ ਪ੍ਰਜਾ ਜਿਨ ਆਪ ਸਵਾਰੀ ॥
+ਸਿਵਕਨ ਕੋ ਸਿਵਗੁਨ ਸੁਖ ਦੀਯੋ ॥
+ਸਤ੍ਰੁਨ ਕੋ ਪਲ ਮੋ ਬਧ ਕੀਯੋ ॥੩੮੬॥
+
+ਘਟ ਘਟ ਕੇ ਅੰਤਰ ਕੀ ਜਾਨਤ ॥
+ਭਲੇ ਬੁਰੇ ਕੀ ਪੀਰ ਪਛਾਨਤ ॥
+ਚੀਟੀ ਤੇ ਕੁੰਚਰ ਅਸਥੂਲਾ ॥
+ਸਭ ਪਰ ਕ੍ਰਿਪਾ ਦ੍ਰਿਸਟਿ ਕਰਿ ਫੂਲਾ ॥੩੮੭॥
+
+ਸੰਤਨ ਦੁਖ ਪਾਏ ਤੇ ਦੁਖੀ ॥
+ਸੁਖ ਪਾਏ ਸਾਧਨ ਕੇ ਸੁਖੀ ॥
+ਏਕ ਏਕ ਕੀ ਪੀਰ ਪਛਾਨੈ ॥
+ਘਟ ਘਟ ਕੇ ਪਟ ਪਟ ਕੀ ਜਾਨੈ ॥੩੮੮॥
+
+ਜਬ ਉਦਕਰਖ ਕਰਾ ਕਰਤਾਰਾ ॥
+ਪ੍ਰਜਾ ਧਰਤ ਤਬ ਦੇਹ ਅਪਾਰਾ ॥
+ਜਬ ਆਕਰਖ ਕਰਤ ਹੋ ਕਬਹੂੰ ॥
+ਤੁਮ ਮੈ ਮਿਲਤ ਦੇਹ ਧਰ ਸਭਹੂੰ ॥੩੮੯॥
+
+ਜੇਤੇ ਬਦਨ ਸ੍ਰਿਸਟਿ ਸਭ ਧਾਰੈ ॥
+ਆਪੁ ਆਪੁਨੀ ਬੂਝਿ ਉਚਾਰੈ ॥
+ਤੁਮ ਸਭ ਹੀ ਤੇ ਰਹਤ ਨਿਰਾਲਮ ॥
+ਜਾਨਤ ਬੇਦ ਭੇਦ ਅਰੁ ਆਲਮ ॥੩੯੦॥
+
+ਨਿਰੰਕਾਰ ਨ੍ਰਿਬਿਕਾਰ ਨ੍ਰਿਲੰਭ ॥
+ਆਦਿ ਅਨੀਲ ਅਨਾਦਿ ਅਸੰਭ ॥
+ਤਾ ਕਾ ਮੂੜ ਉਚਾਰਤ ਭੇਦਾ ॥
+ਜਾ ਕੋ ਭੇਵ ਨ ਪਾਵਤ ਬੇਦਾ ॥੩੯੧॥
+
+ਤਾ ਕੌ ਕਰਿ ਪਾਹਨ ਅਨੁਮਾਨਤ ॥
+ਮਹਾ ਮੂੜ ਕਛੁ ਭੇਦ ਨ ਜਾਨਤ ॥
+ਮਹਾਦੇਵ ਕੌ ਕਹਤ ਸਦਾ ਸਿਵ ॥
+ਨਿਰੰਕਾਰ ਕਾ ਚੀਨਤ ਨਹਿ ਭਿਵ ॥੩੯੨॥
+ 
+ਆਪੁ ਆਪੁਨੀ ਬੁਧਿ ਹੈ ਜੇਤੀ ॥
+ਬਰਨਤ ਭਿੰਨ ਭਿੰਨ ਤੁਹਿ ਤੇਤੀ ॥
+ਤੁਮਰਾ ਲਖਾ ਨ ਜਾਇ ਪਸਾਰਾ ॥
+ਕਿਹ ਬਿਧਿ ਸਜਾ ਪ੍ਰਥਮ ਸੰਸਾਰਾ ॥੩੯੩॥
+
+ਏਕੈ ਰੂਪ ਅਨੂਪ ਸਰੂਪਾ ॥
+ਰੰਕ ਭਯੋ ਰਾਵ ਕਹੀ ਭੂਪਾ ॥
+ਅੰਡਜ ਜੇਰਜ ਸੇਤਜ ਕੀਨੀ ॥
+ਉਤਭੁਜ ਖਾਨਿ ਬਹੁਰਿ ਰਚਿ ਦੀਨੀ ॥੩੯੪॥
+
+ਕਹੂੰ ਫੂਲਿ ਰਾਜਾ ਹ੍ਵੈ ਬੈਠਾ ॥
+ਕਹੂੰ ਸਿਮਟਿ ਭਯੋ ਸੰਕਰ ਇਕੈਠਾ ॥
+ਸਗਰੀ ਸ੍ਰਿਸਟਿ ਦਿਖਾਇ ਅਚੰਭਵ ॥
+ਆਦਿ ਜੁਗਾਦਿ ਸਰੂਪ ਸੁਯੰਭਵ ॥੩੯੫॥
+
+ਅਬ ਰਛਾ ਮੇਰੀ ਤੁਮ ਕਰੋ ॥
+ਸਿਖ੍ਯ ਉਬਾਰਿ ਅਸਿਖ੍ਯ ਸੰਘਰੋ ॥
+ਦੁਸਟ ਜਿਤੇ ਉਠਵਤ ਉਤਪਾਤਾ ॥
+ਸਕਲ ਮਲੇਛ ਕਰੋ ਰਣ ਘਾਤਾ ॥੩੯੬॥
+ 
+ਜੇ ਅਸਿਧੁਜ ਤਵ ਸਰਨੀ ਪਰੇ ॥
+ਤਿਨ ਕੇ ਦੁਸਟ ਦੁਖਿਤ ਹ੍ਵੈ ਮਰੇ ॥
+ਪੁਰਖ ਜਵਨ ਪਗੁ ਪਰੇ ਤਿਹਾਰੇ ॥
+ਤਿਨ ਕੇ ਤੁਮ ਸੰਕਟ ਸਭ ਟਾਰੇ ॥੩੯੭॥
+
+ਜੋ ਕਲਿ ਕੌ ਇਕ ਬਾਰ ਧਿਐਹੈ ॥
+ਤਾ ਕੇ ਕਾਲ ਨਿਕਟਿ ਨਹਿ ਐਹੈ ॥
+ਰਛਾ ਹੋਇ ਤਾਹਿ ਸਭ ਕਾਲਾ ॥
+ਦੁਸਟ ਅਰਿਸਟ ਟਰੈਂ ਤਤਕਾਲਾ ॥੩੯੮॥
+
+ਕ੍ਰਿਪਾ ਦ੍ਰਿਸਟਿ ਤਨ ਜਾਹਿ ਨਿਹਰਿਹੋ ॥
+ਤਾ ਕੇ ਤਾਪ ਤਨਕ ਮਹਿ ਹਰਿਹੋ ॥
+ਰਿਧਿ ਸਿਧਿ ਘਰ ਮੋ ਸਭ ਹੋਈ ॥
+ਦੁਸਟ ਛਾਹ ਛ੍ਵੈ ਸਕੈ ਨ ਕੋਈ ॥੩੯੯॥
+ 
+ਏਕ ਬਾਰ ਜਿਨ ਤੁਮੈ ਸੰਭਾਰਾ ॥
+ਕਾਲ ਫਾਸ ਤੇ ਤਾਹਿ ਉਬਾਰਾ ॥
+ਜਿਨ ਨਰ ਨਾਮ ਤਿਹਾਰੋ ਕਹਾ ॥
+ਦਾਰਿਦ ਦੁਸਟ ਦੋਖ ਤੇ ਰਹਾ ॥੪੦੦॥
+
+ਖੜਗਕੇਤੁ ਮੈ ਸਰਨਿ ਤਿਹਾਰੀ ॥
+ਆਪੁ ਹਾਥ ਦੈ ਲੇਹੁ ਉਬਾਰੀ ॥
+ਸਰਬ ਠੌਰ ਮੋ ਹੋਹੁ ਸਹਾਈ ॥
+ਦੁਸਟ ਦੋਖ ਤੇ ਲੇਹੁ ਬਚਾਈ ॥੪੦੧॥
+
+ਕ੍ਰਿਪਾ ਕਰੀ ਹਮ ਪਰ ਜਗਮਾਤਾ ॥
+ਗ੍ਰੰਥ ਕਰਾ ਪੂਰਨ ਸੁਭਰਾਤਾ ॥
+ਕਿਲਬਿਖ ਸਕਲ ਦੇਖ ਕੋ ਹਰਤਾ ॥
+ਦੁਸਟ ਦੋਖਿਯਨ ਕੋ ਛੈ ਕਰਤਾ ॥੪੦੨॥
+
+ਸ੍ਰੀ ਅਸਿਧੁਜ ਜਬ ਭਏ ਦਯਾਲਾ ॥
+ਪੂਰਨ ਕਰਾ ਗ੍ਰੰਥ ਤਤਕਾਲਾ ॥
+ਮਨ ਬਾਛਤ ਫਲ ਪਾਵੈ ਸੋਈ ॥
+ਦੂਖ ਨ ਤਿਸੈ ਬਿਆਪਤ ਕੋਈ ॥੪੦੩॥
+ਅੜਿਲ ॥
+
+ਸੁਨੈ ਗੁੰਗ ਜੋ ਯਾਹਿ ਸੁ ਰਸਨਾ ਪਾਵਈ ॥
+ਸੁਨੈ ਮੂੜ ਚਿਤ ਲਾਇ ਚਤੁਰਤਾ ਆਵਈ ॥
+ਦੂਖ ਦਰਦ ਭੌ ਨਿਕਟ ਨ ਤਿਨ ਨਰ ਕੇ ਰਹੈ ॥
+ਹੋ ਜੋ ਯਾ ਕੀ ਏਕ ਬਾਰ ਚੌਪਈ ਕੋ ਕਹੈ ॥੪੦੪॥
+
+ਚੌਪਈ ॥
+
+ਸੰਬਤ ਸਤ੍ਰਹ ਸਹਸ ਭਣਿਜੈ ॥
+ਅਰਧ ਸਹਸ ਫੁਨਿ ਤੀਨਿ ਕਹਿਜੈ ॥
+ਭਾਦ੍ਰਵ ਸੁਦੀ ਅਸਟਮੀ ਰਵਿ ਵਾਰਾ ॥
+ਤੀਰ ਸਤੁਦ੍ਰਵ ਗ੍ਰੰਥ ਸੁਧਾਰਾ ॥੪੦੫॥
+
+ਇਤਿ ਸ੍ਰੀ ਚਰਿਤ੍ਰ ਪਖ੍ਯਾਨੇ 
+ਤ੍ਰਿਯਾ ਚਰਿਤ੍ਰੇ ਮੰਤ੍ਰੀ ਭੂਪ ਸੰਬਾਦੇ ਚਾਰ
+ਸੌ ਚਾਰ ਚਰਿਤ੍ਰ ਸਮਾਪਤਮ 
+ਸਤੁ ਸੁਭਮ ਸਤੁ ॥੪੦੪॥੭੫੩੯॥ ਸਮਾਪਤਮ ॥
+            </pre>
+        </div>
+        <hr> 
+        <div class="fateh">
+            <pre>ਵਾਹਿਗੁਰੂ  ਜੀ  ਕਾ  ਖਾਲਸਾ
+    ਵਾਹਿਗੁਰੂ  ਜੀ  ਕੀ  ਫਤੇਹ</pre>
+        </div>
+    </body>
+    </html>

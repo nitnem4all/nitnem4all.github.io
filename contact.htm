@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CONTACT US | nitnem4all</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    .navbar{
+      font-family: 'Aldrich', sans-serif;
+      overflow: hidden;
+      background-color: red;
+    }
+    .navbar a{
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 20px;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .active {
+      background-color: white;
+      color: red !important;
+    }
+    .navbar .icon {
+      display: none;
+    }
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+    .dropdown .dropbtn {
+      font-size: 20px; 
+      font-weight: bold;   
+      border: none;
+      outline: none;
+      color: white;
+      padding: 20px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    .dropdown-content a {
+      float: none;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+    .dropdown:hover .dropbtn{
+      cursor: pointer;
+      background-color: wheat;
+      color:red;
+    }
+    .navbar a:nth-child(even):not(.active):hover{
+      background-color: wheat;
+      color: red;
+    }
+    .navbar a:nth-child(odd):not(.active):hover{
+      background-color: white;
+      color: red;
+    }
+    .dropdown-content a:hover {
+      background-color: whitesmoke !important;
+      color: red !important;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    @media screen and (max-width: 835px) {
+      .navbar a, .dropdown .dropbtn{
+        font-size: 16px;
+        padding:20px 13px;
+      }
+    }
+    @media screen and (max-width: 600px) {
+      .navbar a, .dropdown .dropbtn{
+        font-size: 20px;
+        padding: 20px;
+      }
+      .navbar a:not(:first-child), .dropdown .dropbtn{
+        display: none;
+      }
+      .navbar a.icon {
+        text-align: center;
+        float: none;
+        display: block;
+      }
+    }
+    @media screen and (max-width: 600px) {
+      .navbar.responsive {position: relative;}
+      .navbar.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .navbar.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+      .navbar.responsive .dropdown {float: none;}
+      .navbar.responsive .dropdown-content {position: relative;}
+      .navbar.responsive .dropdown .dropbtn {
+        display: block;
+        width: 100%;
+        text-align: left;
+      }
+    }
+    .header{
+      text-align: center;
+      padding: 20px 0;
+      background-color: cornsilk;
+    }
+    .header h1{
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      color: crimson;
+      font-size: 9vw;
+    }
+    .header code{
+      font-weight: bold;
+      font-family: cursive;
+      margin-top: 10px;
+      color: cornsilk;
+      font-size: 4vw;
+      border-radius: 20px;
+      padding: 10px 50px;
+      animation: changebgclr 16s infinite ease-in-out;
+    }
+    @keyframes changebgclr{
+      0% {background-color: deeppink; transition: ease-in-out 5s;}
+      25% {background-color:deepskyblue; transition: ease-in-out 5s;}
+      50% {background-color: gold; transition: ease-in-out 5s;}
+      75% {background-color: indigo; transition: ease-in-out 5s;}
+      100% {background-color: lawngreen; transition: ease-in-out 5s;}
+    }
+    .footer{
+      background-color: cornsilk;
+      text-align: center;
+      padding: 30px;
+      color: crimson;
+    }
+    .footer code{
+      font-size: 30px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    .footer b{
+      font-size: 30px;
+    }
+    .footer .links{
+      text-align: left;
+      padding:0;
+      color: red;
+      font-size: 30px;
+      margin-bottom: 7px;
+    }
+    .footer a{
+      color: white;
+      font-size: 40px;
+      padding: 7px;
+      border-radius: 20px;
+      margin: 7px;
+    }
+    .main{
+      padding: 40px;
+      background-color: rgb(247, 242, 234);
+    }
+    .column{
+      display: flex;
+      flex-direction: row;
+    }
+    .part1 , .part2{
+      background-color: white;
+      padding: 16px;
+      border-radius: 30px;
+      box-shadow: 10px 10px 16px lightgray;
+    }
+    .part1{
+      width: 500px;
+      margin:0 40px 0 0;
+    }
+    .part2{
+      width: 100%;
+      margin:0;
+    }
+    .part1 h1{
+     animation: changebgclr2 3s ease-in-out infinite;
+     border-radius: 16px 16px 0 0;
+     padding: 10px;
+     margin-bottom: 16px;
+    }
+    .part2 h1{
+     animation: changebgclr3 3s ease-in-out infinite;
+     border-radius: 16px 16px 0 0;
+     padding: 10px;
+     margin-bottom: 16px;
+    }
+    @keyframes changebgclr2{
+      0%{background-color: crimson; color:white; transition: ease-in-out 1.5s;}
+      50%{background-color: white; color: crimson;  transition: ease-in-out 1.5s;}
+      100%{background-color: crimson; color:white; transition: ease-in-out 1.5s;}
+    }
+    @keyframes changebgclr3{
+      0%{background-color: white; color: crimson;  transition: ease-in-out 1.5s;}
+      50%{background-color: crimson; color:white; transition: ease-in-out 1.5s;}
+      100%{background-color: white; color: crimson;  transition: ease-in-out 1.5s;}
+    }
+    .shadow{
+      box-shadow: 0 0 7px 7px darkgray;
+      border-radius: 100px; 
+    }
+    .image#odd{
+      float: left;
+      padding: 16px;
+      background-color: whitesmoke;
+      margin-right: 10px;
+      border-radius: 100px 0 0 100px;
+    }
+    .image:not(#odd){
+      float: right;
+      padding: 16px;
+      background-color: whitesmoke;
+      margin-left: 10px;
+      border-radius: 0 100px 100px 0;
+    }
+    .text#odd{
+      padding: 30px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      background-color: black;
+      height: 136.5px;
+      margin-left: 132px;
+      border-radius: 0 100px 100px 0;
+    }
+    .text:not(#odd){
+      padding: 30px;
+      background-color: black;
+      height: 136.5px;
+      margin-right: 132px;
+      border-radius: 100px 0 0 100px;
+    }
+    .text a{
+      text-decoration: none;
+      color: white;
+      text-align: center;
+      font-weight: bold;
+      font-size: 34.5px;
+      text-transform: uppercase;
+    }
+    .text a:hover{
+      color: lightpink;
+      transition: all 0.5s ease-in-out;
+      text-decoration: 5px lightpink underline;
+    }
+    .line {
+      height: 5px;
+      border-bottom: 2px #959087 solid;
+      padding-bottom: 8px;
+      margin-top: 3px;
+      margin-bottom: 15px;
+    }
+    .left{
+      float: left;
+    }
+    .right{
+      float: right;
+    }
+    .part2 form{
+      padding: 30px;
+      padding-bottom: 0;
+    }
+    .part2 form label{
+      font-size: 30px;
+      color: black;
+      font-weight: 500;
+    }
+    .part2 form input,.part2 form textarea{
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 16px;
+      outline: none;
+      border: 2px solid red;
+      font-size: 30px;
+      font-weight: bolder;
+    }
+    .part2 form input[type='checkbox']{
+      width: 20px;
+      height: 20px;
+    }
+    ::placeholder{
+      color: red;
+      text-transform: capitalize;
+    }
+    .part2 form input:focus,textarea:focus{
+      background-color: rgb(252, 167, 181);
+      color: white;
+    }
+    .part2 form input:focus::placeholder,textarea:focus::placeholder{
+      color: white;
+    }
+    form textarea{
+      resize: vertical;
+      height: 160px;
+    }
+    form button{
+      margin-top: 20px;
+      text-align: center;
+      padding: 10px;
+      font-weight: bold;
+      font-size: 25px;
+      color: white;
+    }
+    form button[type='submit']{
+      cursor: pointer;
+      color: rgb(252, 167, 181);
+      background-color: white;
+      border: 2px solid red;
+      border-radius: 20px;
+    }
+    form button[type='reset']{
+      cursor: pointer;
+      background-color: rgb(252, 167, 181);
+      border: 2px solid red;
+      border-radius: 20px;
+    }
+    #status{
+      border-radius: 20px;
+      padding: 5px;
+      margin-top: 16px;
+      width: 100%;
+      font-weight: 100;
+      text-align: center;
+      font-size: 10px;
+      font-family: cursive;
+      line-height: 1.6;
+    }
+    #status.success{
+      font-size: 20px;
+      background-color: greenyellow;
+      color:white;
+      animation: status 10s ease-in-out forwards;
+    }
+    #status.error{
+      font-size: 20px;
+      background-color: red;
+      color:white;
+      animation: status 10s ease-in-out forwards;
+    }
+    @keyframes status {
+      0%  {opacity: 1; pointer-events: all;}
+      90% {opacity: 1; pointer-events: all;}
+      100%{opacity: 0; pointer-events: none;}
+    }
+    form button[type='submit']:hover{background-color: rgb(252, 167, 181); color: white;}
+    form button[type='reset']:hover{background-color: white; color: rgb(252, 167, 181);}
+    #myBtn {
+      display: none;
+      position: fixed;
+      bottom: 10px;
+      right: 20px;
+      z-index: 99;
+      font-size: 40px;
+      background-color: red;
+      color: white;
+      cursor: pointer;
+      padding:0 7px;
+      border-radius: 30%;
+    }
+    #myBtn:hover{
+      background-color: white;
+      border: 2px solid violet;
+      color: red;
+    }
+    @media screen and  (max-width: 768px){
+      .column{
+        flex-direction: column;
+      }
+      .part1,.part2{
+        width: 100%;
+        padding: 30px;
+        margin: 30px 0;
+      }
+    }
+    @media screen and (max-width: 600px){
+      .main{
+        padding: 10px;
+      }
+      .image#odd{
+        padding: 7px;
+      }
+      .image:not(#odd){
+        padding: 7px;
+      }
+      .column{
+        flex-direction: column;
+      }
+      .part1,.part2{
+        width: 100%;
+        margin: 30px 0;
+        padding: 16px;
+      }
+      .image{
+        float: none;
+        padding:16px 32.5% !important;
+        text-align: center !important;
+        height: auto !important;
+        width: 100% !important;
+        margin: 0 !important;
+        border-radius: 77px 77px 0 0 !important;
+      }
+      .shadow{
+        display: flex;
+        flex-direction: column;
+        border-radius: 77px !important;
+      }
+      .text{
+        padding: 30px !important;
+        text-align: center !important;
+        height: 120px !important;
+        margin: 0 !important;
+        border-radius: 0 0 77px 77px!important;
+      }
+      .text a{
+        text-decoration: 2px lightpink underline;
+      }
+      .shadow .text#odd{
+        margin-left: 82.5px;
+        padding: 30px !important;
+        text-align: center !important;
+        font-size: 12px !important;
+      }
+      .text#odd.textus{
+        margin: 0 !important;
+        padding: 35px !important;
+        text-align: center !important;
+      }
+      .text:not(#odd){
+        margin-right: 82.5px;
+        padding: 35px !important;
+        text-align: center !important;
+        font-size: 25px !important;
+      }
+      .text a{
+        font-size: 25px !important;
+      }
+      .shadow:last-of-type .text#odd a{
+        font-size: 11px !important;
+      }
+      .shadow:last-of-type .text#odd{
+        padding:0 !important;
+        padding-top: 20px !important;
+      }
+      .part2 form{
+        padding: 5.5px;
+      }
+      .part2 form textarea{
+        resize: vertical;
+        margin-bottom: 20px !important;
+      }
+      .part2 form button[type='submit']{
+        margin-left: 5px !important;
+      }
+      form label{
+        font-size: 20px !important;
+      }
+      form input{
+        font-size: 25px !important;
+      }
+      .text{
+        font-size: 10px !important;
+      }
+      .footer{
+        text-align: left;
+      }
+      .footer b{
+        font-size: 20px;
+      }
+      .footer code{
+        font-size: 20px;
+      }
+      .footer .links{
+        font-size: 20px;
+      }
+      .footer a{
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <h1>nitnem4all</h1>
+  <code>"Building Blocks Of Sikhism"</code>
+</div>
+
+<div class="navbar" id="mynavbar">
+  <a href="index.htm">HOME</a>
+  <div class="dropdown">
+    <button class="dropbtn">NITNEM PATH <i class="fa fa-caret-down"></i></button>
+    <div class="dropdown-content" style="text-transform: lowercase;">
+      <a href="Gjapji sahib.htm">JAPJI SAHIB JI</a>
+      <a href="Gjaap sahib.htm">JAAP SAHIB JI</a>
+      <a href="Gtva prasad saviyay.htm">TAV PRASAD SAVAIYE</a>
+      <a href="Gchoupai sahib.htm">CHOUPAI SAHIB JI</a>
+      <a href="Ganand sahib.htm">ANAND SAHIB JI</a>
+      <a href="Grehras sahib.htm">REHRAS SAHIB JI</a>
+      <a href="Gsohila sahib.htm">SOHILA SAHIB JI</a>
+      <a href="Gsukhmani sahib.htm">SUKHMANI SAHIB JI</a>
+      <a href="Gasa di var.htm">ASA DI VAAR</a>
+      <a href="Gbarah maha.htm">BARAH MAHA</a>
+      <a href="Gbasant ki vaar.htm">BASANT KI VAAR</a>
+      <a href="Gdukh bhanjani sahib.htm">DUKH BHANJANI SAHIB JI</a>
+      <a href="Graag mala.htm">RAAG MALA</a>
+      <a href="Gardas.htm">ARDAAS</a>
+    </div>
+  </div>
+  <a href="about.htm">ABOUT US</a>
+  <a href="contact.htm" class="active">CONTACT US</a>
+  <a href="download.htm">DOWNLOAD PDF</a>
+  <a class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+</div>
+  
+<script>
+  function myFunction() {
+    var x = document.getElementById("mynavbar");
+    if (x.className === "navbar") {
+      x.className += " responsive";
+    } else {
+      x.className = "navbar";
+    }
+  }
+  </script>
+
+<a onclick="topFunction()" id="myBtn" title="Back To Top">&#11165;</a>
+
+<script>
+  var mybutton = document.getElementById("myBtn");
+  window.onscroll = function() {scrollFunction()};
+  function scrollFunction() {
+    if (document.body.scrollTop > 370 || document.documentElement.scrollTop > 370) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+</script>
+
+<div class="main">
+  <div class="column">
+    <div class="part1">
+      <h1>Reach Us:</h1>
+        
+      <div class="shadow">
+        <div class="image" id="odd"><img src="https://png.pngtree.com/svg/20170918/f2ee803a9c.png" alt="" height="100px" width="100px"></div>
+        <div class="text" id="odd" style="padding-top: 18px;"><code>Matoshri Ramabai Ambedkar Marg, <br>Antrolikar Nagar, <br>Solapur, <br>Maharashtra 413224.</code></div>
+      </div>
+      
+      <div class="line">
+        <img src="http://www.gurunanakhealing.com/_theme/images/left_1.png" border="0" alt="" class="left">
+        <img src="http://www.gurunanakhealing.com/_theme/images/left_2.png" border="0" alt="" class="right">
+      </div>
+      
+      
+      <div class="shadow">
+        <div class="image"><img src="http://reoc.brockport.edu/wp-content/uploads/2017/07/call-icon-hi.png" alt="" height="100px" width="100px">        </div>
+        <div class="text" style="padding-top: 50px; padding-left: 50px;"><a href="tel:+918767609939">call us</a></div>
+      </div>
+      
+      <div class="line">
+        <img src="http://www.gurunanakhealing.com/_theme/images/left_1.png" border="0" alt="" class="left">
+        <img src="http://www.gurunanakhealing.com/_theme/images/left_2.png" border="0" alt="" class="right">
+      </div>
+      
+      
+      <div class="shadow">
+        <div class="image" id="odd"><img src="http://www.freeiconspng.com/uploads/message-icon-png-13.png" alt="" height="100px" width="100px">        </div>
+        <div class="text textus" id="odd" style="padding-top: 50px; padding-left: 50px;"><a href="sms:+918767609939">text us</a></div>
+      </div>
+      
+      <div class="line">
+        <img src="http://www.gurunanakhealing.com/_theme/images/left_1.png" border="0" alt="" class="left">
+        <img src="http://www.gurunanakhealing.com/_theme/images/left_2.png" border="0" alt="" class="right">
+      </div> 
+        
+      
+      <div class="shadow">
+        <div class="image"><img src="https://www.shareicon.net/data/2016/10/18/844045_media_512x512.png" alt="" height="100px" width="100px">          </div>
+        <div class="text" style="padding-top: 50px; padding-left: 50px;"><a href="https://wa.me/918767609939?text=Hey there!" target="_blank">Whatsapp us</a></div>
+      </div>
+      
+      <div class="line">
+        <img src="http://www.gurunanakhealing.com/_theme/images/left_1.png" border="0" alt="" class="left">
+        <img src="http://www.gurunanakhealing.com/_theme/images/left_2.png" border="0" alt="" class="right">
+      </div>
+      
+      
+      <div class="shadow">
+        <div class="image" id="odd"><img src="https://tse4.mm.bing.net/th?id=OIP.g9gWiUAsg0Wgt9KnIjMinAHaHa&pid=Api&P=0&w=300&h=300" alt="" height="100px" width="100px" style="border-radius: 20px;">        </div>
+        <div class="text" id="odd" style="padding-left: 10px; padding-top: 16px;">
+          <a href="mailto:mailus@nitnem4all.com?subject=hi!" style="font-size: 19px;">mailus@nitnem4all.com</a>
+        </div>
+      </div>
+    </div>
+    <div class="part2">
+      <h1>Fill the Form:</h1>
+      <form action="https://formspree.io/f/moqylava" method="post" id="my-form">
+        <label for="name">Enter Your Name: <font style="color: red;">*</font></label> <br>
+        <input type="text" id="name" name="fname" placeholder="first" required>
+        <input type="text" id="name" name="lname" placeholder="last" required>
+        <label for="email">Your Email: <font style="color: red;">*</font></label> <br>
+        <input type="text" id="email" name="email" required>
+        <label for="phone no">Your Phone Number: <font style="color: red;">*</font></label> <br>
+        <input type="text" id="phone no" name="phone no" required>
+        <label for="message">Message: <font style="color: red;">*</font></label> <br>
+        <textarea id="message" name="message" required></textarea> 
+        <input type="checkbox" name="checkbox" id="checkbox" required>
+        <code for="checkbox" style="font-size: 17px; text-transform: uppercase;">By checking the box you accept that you are not a spambot and all the information given by you above is true.</code> <br>
+        <div style="text-align: center;">
+          <button type="submit">SUBMIT</button>
+          <button type="reset">RESET</button>
+        </div>
+      </form>
+      <div id="status"></div>
+    </div>
+  </div>
+</div>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3802.0552514544925!2d75.91636701390613!3d17.64754199989705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x91bb8fcef20493b1!2sGurudwara%20Guru%20Nanak%20Darbar!5e0!3m2!1sen!2sin!4v1624543223647!5m2!1sen!2sin" width="100%" height="500px" style="border: 5px dashed rgb(247, 242, 234);" allowfullscreen="" loading="lazy"></iframe>
+
+<div class="footer">
+  <b>&copy;</b><code> nitnem4all, All rights reserved.</code> <br>
+  <div class="links">
+    <font style="font-family: cursive;">help us, like, share & subscribe: </font>
+  </div>
+  <a href="https://www.facebook.com/gurudwara.solapur" target="_blank" style="background-color: #1877f2;"><i class="fa fa-facebook-square"></i></a>
+  <a href="whatsapp://send?text=http://www.nitnempath.000webhostapp.com" style="background-color: rgb(153, 255, 0);"><i class="fa fa-whatsapp"></i></a>
+  <a href="https://www.youtube.com/channel/UCEA_RQ7li3gqTrbVsMPrUpg" target="_blank" style="background-color: red;"><i class="fa fa-youtube-play"></i></a>
+</div>
+<script src="contact.js"></script>
+</body>
+</html>

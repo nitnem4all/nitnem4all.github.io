@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ABOUT US | nitnem4all</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    .navbar{
+      font-family: 'Aldrich', sans-serif;
+      overflow: hidden;
+      background-color: red;
+    }
+    .navbar a{
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 20px;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .active {
+      background-color: white;
+      color: red !important;
+    }
+    .navbar .icon {
+      display: none;
+    }
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+    .dropdown .dropbtn {
+      font-size: 20px; 
+      font-weight: bold;   
+      border: none;
+      outline: none;
+      color: white;
+      padding: 20px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    .dropdown-content a {
+      float: none;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+    .dropdown:hover .dropbtn{
+      cursor: pointer;
+      background-color: wheat;
+      color:red;
+    }
+    .navbar a:nth-child(even):not(.active):hover{
+      background-color: wheat;
+      color: red;
+    }
+    .navbar a:nth-child(odd):not(.active):hover{
+      background-color: white;
+      color: red;
+    }
+    .dropdown-content a:hover {
+      background-color: whitesmoke !important;
+      color: red !important;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    @media screen and (max-width: 835px) {
+      .navbar a, .dropdown .dropbtn{
+        font-size: 16px;
+        padding:20px 13px;
+      }
+    }
+    @media screen and (max-width: 600px) {
+      .navbar a, .dropdown .dropbtn{
+        font-size: 20px;
+        padding: 20px;
+      }
+      .navbar a:not(:first-child), .dropdown .dropbtn{
+        display: none;
+      }
+      .navbar a.icon {
+        text-align: center;
+        float: none;
+        display: block;
+      }
+    }
+    @media screen and (max-width: 600px) {
+      .navbar.responsive {position: relative;}
+      .navbar.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .navbar.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+      .navbar.responsive .dropdown {float: none;}
+      .navbar.responsive .dropdown-content {position: relative;}
+      .navbar.responsive .dropdown .dropbtn {
+        display: block;
+        width: 100%;
+        text-align: left;
+      }
+    }
+    .header{
+      text-align: center;
+      padding: 20px 0;
+      background-color: cornsilk;
+    }
+    .header h1{
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      color: crimson;
+      font-size: 9vw;
+    }
+    .header code{
+      font-weight: bold;
+      font-family: cursive;
+      margin-top: 10px;
+      color: cornsilk;
+      font-size: 4vw;
+      border-radius: 20px;
+      padding: 10px 50px;
+      animation: changebgclr 16s infinite ease-in-out;
+    }
+    @keyframes changebgclr{
+      0% {background-color: deeppink; transition: ease-in-out 5s;}
+      25% {background-color:deepskyblue; transition: ease-in-out 5s;}
+      50% {background-color: gold; transition: ease-in-out 5s;}
+      75% {background-color: indigo; transition: ease-in-out 5s;}
+      100% {background-color: lawngreen; transition: ease-in-out 5s;}
+    }
+    .footer{
+      background-color: cornsilk;
+      text-align: center;
+      padding: 30px;
+      color: crimson;
+    }
+    .footer code{
+      font-size: 30px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    .footer b{
+      font-size: 30px;
+    }
+    .footer .links{
+      text-align: left;
+      padding:0;
+      color: red;
+      font-size: 30px;
+      margin-bottom: 7px;
+    }
+    .footer a{
+      color: white;
+      font-size: 40px;
+      padding: 7px;
+      border-radius: 20px;
+      margin: 7px;
+    }
+    .home:nth-of-type(even){
+      padding: 40px;
+    }
+    .home:nth-of-type(odd){
+      padding: 40px;
+      background-color: rgb(247, 242, 234);
+    }
+    .home:nth-of-type(even) .part{
+      background-color: rgb(247, 242, 234);
+      border-radius: 0 0 20px 20px;
+      padding: 20px;
+    }
+    .home:nth-of-type(odd) .part{
+      background-color: white;
+      border-radius: 0 0 20px 20px;
+      padding: 20px;
+    }
+    .home font{
+      -webkit-text-stroke: 1.5px rgb(177, 14, 14);
+      color: transparent;
+      font-size: 50px;
+      font-weight: bold;
+    }
+    .home font:hover{
+      color: red;
+      -webkit-text-stroke: 0px red;
+    }
+    .home p{
+      line-height: 1.6;
+      font-size: 16px;
+    }
+    .line {
+    height: 5px;
+    border-bottom: 2px #959087 solid;
+    padding-bottom: 8px;
+    margin-top: 3px;
+    margin-bottom: 15px;
+    }
+    .left{
+      float: left;
+    }
+    .right{
+      float: right;
+    }
+    .partheader h1{
+      background-color: crimson;
+      color: white;
+      padding: 20px;
+      border-radius:20px 20px 0 0;
+    }
+    .row{
+      display: flex;
+      flex-direction: row;
+    }
+    .introcard{
+      background-color: rgb(248, 225, 182);
+      cursor: pointer;
+      padding: 30px;
+      height: auto;
+      width: 350px;
+      box-shadow: 10px 10px 16px lightgray;
+      margin: 30px;
+      border-radius: 30px;
+    }
+    .introcard:hover{
+      transition: all ease-in-out 0.7s;
+      transform: translate(-16px,-16px);
+    }
+    .introcard p{
+      font-size: 20px;
+      line-height: 1.6;
+      font-weight: bold;
+      color: red;
+    }
+    .introcard p:hover{
+      color: white;
+      -webkit-text-stroke: 0.1px black;
+    }
+    #myBtn {
+      display: none;
+      position: fixed;
+      bottom: 10px;
+      right: 20px;
+      z-index: 99;
+      font-size: 40px;
+      background-color: red;
+      color: white;
+      cursor: pointer;
+      padding:0 7px;
+      border-radius: 30%;
+    }
+    #myBtn:hover{
+      background-color: white;
+      border: 2px solid violet;
+      color: red;
+    }
+    @media screen and (max-width: 600px){
+      .footer{
+        text-align: left;
+      }
+      .footer b{
+        font-size: 20px;
+      }
+      .footer code{
+        font-size: 20px;
+      }
+      .footer .links{
+        font-size: 20px;
+      }
+      .footer a{
+        font-size: 20px;
+      }
+      .home:nth-of-type(odd){
+        padding: 20px;
+      } 
+      .home:nth-of-type(even){
+        padding: 20px;
+      } 
+      .home:nth-of-type(odd) .part{
+        padding: 10px;
+      }
+      .home:nth-of-type(even) .part{
+        padding: 10px;
+      }
+      .home p{
+        font-size: 14px;
+      }
+      .row{
+        flex-direction: column;
+      }
+      .introcard{
+        margin:30px 0;
+        width: 100%;
+      }
+      .introcard p{
+        font-size: 16px;
+      }
+      .introcard:hover{
+        transform: none;
+      }
+      .introcard img{
+        width: 100% !important;
+        margin: 0 !important;
+        height: auto;
+      }
+    }
+    @media screen and (max-width: 768px){
+      .row{
+        flex-direction: column;
+      }
+      .introcard{
+        margin:30px 0;
+        width: 100%;
+      }
+      .introcard:hover{
+        transform: none;
+      }
+      .introcard img{
+        width: 70%;
+        margin-left: 13vw;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <h1>nitnem4all</h1>
+  <code>"Building Blocks Of Sikhism"</code>
+</div>
+
+<div class="navbar" id="mynavbar">
+  <a href="index.htm">HOME</a>
+  <div class="dropdown">
+    <button class="dropbtn">NITNEM PATH <i class="fa fa-caret-down"></i></button>
+    <div class="dropdown-content" style="text-transform: lowercase;">
+      <a href="Gjapji sahib.htm">JAPJI SAHIB JI</a>
+      <a href="Gjaap sahib.htm">JAAP SAHIB JI</a>
+      <a href="Gtva prasad saviyay.htm">TAV PRASAD SAVAIYE</a>
+      <a href="Gchoupai sahib.htm">CHOUPAI SAHIB JI</a>
+      <a href="Ganand sahib.htm">ANAND SAHIB JI</a>
+      <a href="Grehras sahib.htm">REHRAS SAHIB JI</a>
+      <a href="Gsohila sahib.htm">SOHILA SAHIB JI</a>
+      <a href="Gsukhmani sahib.htm">SUKHMANI SAHIB JI</a>
+      <a href="Gasa di var.htm">ASA DI VAAR</a>
+      <a href="Gbarah maha.htm">BARAH MAHA</a>
+      <a href="Gbasant ki vaar.htm">BASANT KI VAAR</a>
+      <a href="Gdukh bhanjani sahib.htm">DUKH BHANJANI SAHIB JI</a>
+      <a href="Graag mala.htm">RAAG MALA</a>
+      <a href="Gardas.htm">ARDAAS</a>
+    </div>
+  </div>
+  <a href="about.htm" class="active">ABOUT US</a>
+  <a href="contact.htm">CONTACT US</a>
+  <a href="download.htm">DOWNLOAD PDF</a>
+  <a class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+</div>
+  
+<script>
+  function myFunction() {
+    var x = document.getElementById("mynavbar");
+    if (x.className === "navbar") {
+      x.className += " responsive";
+    } else {
+      x.className = "navbar";
+    }
+  }
+  </script>
+
+<a onclick="topFunction()" id="myBtn" title="Back To Top">&#11165;</a>
+
+<script>
+  var mybutton = document.getElementById("myBtn");
+  window.onscroll = function() {scrollFunction()};
+  function scrollFunction() {
+    if (document.body.scrollTop > 370 || document.documentElement.scrollTop > 370) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+</script>
+
+<div class="home">
+  <div class="partheader">
+    <h1>ABOUT SIKHISM</h1>
+  </div>
+  <div class="part">
+    <p>Various sources estimate that Sikhism has about 26 million followers, making it the fifth largest organized religion in the world. It is surpassed in numbers only by Christianity, Islam,Hinduism,and Buddhism. About 21 million Sikhs live in the Punjab, India. About 280,000 live in United States, 460,000 in Canada and 430,000 are in the UK.The most important thing in Sikhism is the internal religious state of the individual. Sikhism is a monotheistic religion. Sikhism stresses the importance of doing good actions rather than merely carrying out rituals.</p> <br>
+    <p>Sikhs believe that the way to lead a good life is to:</p>
+    <p style="font-weight: bold; font-family: monospace; color: red;">1. Keep God in heart and mind at all times</p>
+    <p style="font-weight: bold; font-family: monospace; color: red;">2. Live honestly and work hard</p>
+    <p style="font-weight: bold; font-family: monospace; color: red;">3. Treat everyone equally</p>
+    <p style="font-weight: bold; font-family: monospace; color: red;">4. Be generous to the less fortunate</p>
+    <p style="font-weight: bold; font-family: monospace; color: red;">5. Serve others</p> <br>
+    <p>The Sikh place of worship is called a Gurudwara. The Sikh scripture is the Guru Granth Sahib, a religious book that Sikhs consider as a living Guru. A GurSikh (Baptised Sikh) prays (Nitnem) 5 times daily.</p> <br>
+    <p>Keeping the above teachings of our Guru’s in mind, We have developed nitnem4all as the first virtual community platform for Sikhs in Solapur. At 'nitnem4all' we believe by treating all human beings as equal and serving (SEWA) the less fortunate Sikhs through the concept of "Daswant" (offering 10% of time and finances to less fortunate) we can build a better Sikh community, as taught by our Guruji.</p>
+  </div>
+</div>
+
+<div class="home">
+  <div class="partheader">
+    <h1>ABOUT US</h1>
+  </div>
+  <div class="part">
+    <p>nitnem4all group was born from humble beginnings. The idea for a virtual platform for the Sikh community initially evolved from visits to the local Gurudwaras. There was a strong need to keep the community bind with gurbani and nitnem. The idea then evolved in to creating a virtual platform for the Sikh community, where nitnem could be accessed and shared from a single location.</p> <br>
+    <p>Today, nitnem4all is the biggest virtual platform for the Sikh community in solapur and aims to bridge the information gap for the older members of the community by keeping them connected with gurbani even in these times without leaving their homes. The platform also benefits and supports the younger generation by teaching them the concept of spiritual values and working towards a better and more sustainable world. Community work and helping the disadvantaged is a very important aspect of nitnem4all group.Imagine if everyone in the world did an act of kindness or performed one good deed per day. This planet, our home, would be a much better place to live in.</p><br>
+    <code>The team at nitnem4all appreciates your ongoing support and feedback as we continue to grow and support the community.</code>
+  </div>
+</div>
+
+<div class="home">
+  <div class="partheader">
+    <h1>OUR MISSION, VISION AND MOTTO</h1>
+  </div>
+  <div class="part">
+    <div class="row">
+      <div class="introcard">
+      <img src="mission.png" alt="mission" height="130px" width="250px">
+      <p>Our Mission is to help all the sikhs worldwide so that they can complete their nitnem paths..</p>
+      </div>
+      <div class="introcard">
+      <img src="vision.png" alt="vision" height="130px" width="250px">
+      <p>Our Vision is that all the sikhs worldwide do their nitnem paths everyday..<br>Nitnem helps to remove filth in our hearts and make our soul divine and pure..</p>
+      </div>
+      <div class="introcard">
+      <img src="motto.png" alt="motto" height="130px" width="250px">
+      <p>"Nitnem is the purest way to make our hearts pure"</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="home">
+  <div class="partheader">
+    <h1>OUR VALUES</h1>
+  </div>
+  <div class="part">
+    <p>We strive to keep up to our Values as they are derived from teachings of our Guru Ji. nitnem4all group is built on the fundamental concept of Sikhs for the Sikhs on the ways taught by our Gurus:</p> <br>
+    <p>1. <b>AKAL PURAKH</b> – Recognise God as the giver of intellect and strength</p>
+    <p>2. <b>KIRT KARO</b> ( Earning/making a honest living, without exploitation or Fraud)</p>
+    <p>3. <b>VAND CHAKKO</b> (Sharing with others, helping those who are in need)</p>
+    <p>4. <b>NAAM JAPO</b> (Meditate in the name of God to control 5 Evils and eliminate sufferings for a happy life)</p>
+    <p>5. <b>DASWANT</b> (Donate 10% of your resources to the community to assist the disadvantaged)</p>
+    <p>6. <b>GURU</b> – Accept Guru Granth Sahib Ji as true Guru</p>
+    <p>7. <b>SEWA</b> – Pyar naal Gursikhi te Gursikh di sewa Karni (Assist a gursikh in their tough times). Do as much sewa as we can for the needy and the troubled</p>
+    <p>8. <b>KARAM</b> – Doing Righteous Deeds</p>
+    <p>9. <b>DHUR KI BANI</b> – Do all work in accordance with Gurbani</p>
+    <p>10.<b>KIRTAN</b> (kalyug mein kirtan pardhana)</p>
+  </div>
+</div>
+
+<div class="footer">
+    <b>&copy;</b><code> nitnem4all, All rights reserved.</code> <br>
+    <div class="links">
+      <font style="font-family: cursive;">help us, like, share & subscribe: </font>
+    </div>
+    <a href="https://www.facebook.com/gurudwara.solapur" target="_blank" style="background-color: #1877f2;"><i class="fa fa-facebook-square"></i></a>
+    <a href="whatsapp://send?text=http://www.nitnempath.000webhostapp.com" style="background-color: rgb(153, 255, 0);"><i class="fa fa-whatsapp"></i></a>
+    <a href="https://www.youtube.com/channel/UCEA_RQ7li3gqTrbVsMPrUpg" target="_blank" style="background-color: red;"><i class="fa fa-youtube-play"></i></a>
+  </div>
+</body>
+</html>
