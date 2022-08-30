@@ -1,5 +1,7 @@
 # nitnem4all.github.io
 
+![logo](favicon.png)
+
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -19,15 +21,15 @@ The team at nitnem4all appreciates your ongoing support and feedback as we conti
 
 > OUR MISSION, VISION AND MOTTO::
 
-###MISSION
-#####Our Mission is to help all the sikhs worldwide so that they can complete their nitnem paths..
+### MISSION
+##### Our Mission is to help all the sikhs worldwide so that they can complete their nitnem paths..
 
-###VISION
-#####Our Vision is that all the sikhs worldwide do their nitnem paths everyday..
-#####Nitnem helps to remove filth in our hearts and make our soul divine and pure..
+### VISION
+##### Our Vision is that all the sikhs worldwide do their nitnem paths everyday..
+##### Nitnem helps to remove filth in our hearts and make our soul divine and pure..
 
-###MOTTO
-#####"Nitnem is the purest way to make our hearts pure"
+### MOTTO
+##### "Nitnem is the purest way to make our hearts pure"
 
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -57,7 +59,7 @@ We strive to keep up to our Values as they are derived from teachings of our Gur
 
 9. DHUR KI BANI – Do all work in accordance with Gurbani
 
-10.KIRTAN (kalyug mein kirtan pardhana)
+ 10.KIRTAN (kalyug mein kirtan pardhana)
 
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -73,18 +75,21 @@ Nitnem banis are the daily prayers of Sikhism. Five required daily prayers are k
 There are 7 banis in nitnem which need to be compulsorily recited by a sikh every day..
 they are divided into 3 groups based on the time they need to be recited::
 
-##1) AMRIT VELE DI BAANI --- these banis is recited at the early morning hours after a sikh wakes up and bathes.. They include::
+## 1) AMRIT VELE DI BAANI --- these banis is recited at the early morning hours after a sikh wakes up and bathes.. They include::
+   
    == [JAPJI SAHIB](https://nitnem4all.github.io/Gjapji%20sahib.htm)
    == [JAAP SAHIB](https://nitnem4all.github.io/Gjaap%20sahib.htm)
    == [TVA PRASAD SAVAIYE](https://nitnem4all.github.io/Gtva%20prasad%20saviyay.htm)
    == [CHOUPAI SAHIB](https://nitnem4all.github.io/Gchoupai%20sahib.htm)
    == [ANAND SAHIB](https://nitnem4all.github.io/Ganand%20sahib.htm)
    
-##2) SANDHYA VELE DI BAANI --- this bani is recited at the time when the sun is going down::
+## 2) SANDHYA VELE DI BAANI --- this bani is recited at the time when the sun is going down::
+   
    == [REHRAS SAHIB](https://nitnem4all.github.io/Grehras%20sahib.htm)
 
-##3) RAAT VICH SON DE VELE PADHAN DI BAANI --- this bani is on your bed when your going for sleep::
-   === [SOHILA SAHIB](https://nitnem4all.github.io/Gsohila%20sahib.htm)
+## 3) RAAT VICH SON DE VELE PADHAN DI BAANI --- this bani is on your bed when your going for sleep::
+   
+   == [SOHILA SAHIB](https://nitnem4all.github.io/Gsohila%20sahib.htm)
    
  
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -94,7 +99,7 @@ they are divided into 3 groups based on the time they need to be recited::
 
 We are the team of "nitnem4all" group and we are dedicated to provide free gurbani reading to ensure that all the sikhs who do not have bani gutka's, still complete their NITNEM.
 
-We are born out of noble vision of providing Correct and free gurbani to all gursikhs worldwide.. We do not take any kind of money for this holy purpose and our service is 100% free and accurate. We have checked all the written gurbani almost 4-5 times to avoid disrespect of gurbani.. Even then, If you find any mistake in any bani, kindly forgive us and inform us about it by mailing us at mitnem4all@gmail.com..
+We are born out of noble vision of providing Correct and free gurbani to all gursikhs worldwide.. We do not take any kind of money for this holy purpose and our service is 100% free and accurate. We have checked all the written gurbani almost 4-5 times to avoid disrespect of gurbani.. Even then, If you find any mistake in any bani, kindly forgive us and inform us about it by mailing us at nitnem4all@gmail.com..
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
