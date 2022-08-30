@@ -78,10 +78,15 @@ they are divided into 3 groups based on the time they need to be recited::
 ## 1) AMRIT VELE DI BAANI --- these banis is recited at the early morning hours after a sikh wakes up and bathes.. They include::
    
    == [JAPJI SAHIB](https://nitnem4all.github.io/Gjapji%20sahib.htm)
+   
    == [JAAP SAHIB](https://nitnem4all.github.io/Gjaap%20sahib.htm)
+   
    == [TVA PRASAD SAVAIYE](https://nitnem4all.github.io/Gtva%20prasad%20saviyay.htm)
+   
    == [CHOUPAI SAHIB](https://nitnem4all.github.io/Gchoupai%20sahib.htm)
+   
    == [ANAND SAHIB](https://nitnem4all.github.io/Ganand%20sahib.htm)
+   
    
 ## 2) SANDHYA VELE DI BAANI --- this bani is recited at the time when the sun is going down::
    
