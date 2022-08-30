@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@800&family=Langar&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+<style>
+    .fateh{
+        font-size: 35px;
+        font-family: 'Baloo Paaji 2', cursive;
+        background-color: black;
+        text-align: center;
+        color:deeppink;
+        border-radius: 300px;
+        border-style:double;
+        border-top-color:fuchsia;
+        border-bottom-color: deepskyblue;
+        border-left-color:darkorange;
+        border-right-color: lawngreen;
+        border-width: 10px;
+        padding: 16px;
+    }
+    .fateh#first{
+        margin-top: 125px;
+    }
+    .pages{
+        font-family: 'Langar', cursive;
+        background-color:navajowhite; 
+        color: red;
+        font-weight: 600;
+        text-align: center;
+        font-size: 30px;
+        border:30px solid transparent;
+        border-image: url(floral.png) 220 repeat;
+    }
+    hr{
+        border-color:crimson;
+        border-style: dotted;
+        border-width: 3px;
+        border-radius: 16px;
+    }
+    .header{
+        border-radius: 0 0 16% 16%;
+        display: flex;
+        flex-direction: row;
+        position: fixed;
+        width:100%;
+        top: 0;
+        left: 0;
+        padding: 16px;
+        padding-left: 7px;
+        background-color: black;
+        font-size: 25px;
+        color: white;
+    }
+    .header a.first{
+        color: white;
+        margin-top: 2.6%;
+        text-decoration: none;
+    }
+    .header a:hover{
+        color: deeppink;
+    }
+    .back{
+        margin-left: 16px;
+        margin-right: 7px;
+    }
+    .header a.first:hover .back{
+        transition: 2s;
+        margin-left: 7px;
+        margin-right: 20px;
+        color: deeppink;
+    }
+    .header code{
+        color: deeppink;
+        margin-left: 260px;
+        margin-right: 260px;
+        font-weight: bold;
+        font-size: 70px;
+    }
+    .header code:hover{
+        animation: headerclr 1.6s ease-in-out infinite;
+    }
+    @keyframes headerclr {
+        0%{color: deeppink;}
+        50%{color: white;}
+        100%{color: deeppink;}
+    }
+    .dropbtn {
+        background-color: ghostwhite;
+        color: deeppink;
+        padding: 12px;
+        font-size:18px;
+        border: none;
+        cursor: pointer;
+    }
+    .dropbtn b{
+        margin-left: 16px;
+    }
+    .dropbtn:hover, .dropbtn:focus {
+        background-color: deeppink;
+        color: white;
+    }
+    .dropdown { 
+        margin-top: 1.9%;
+        display: inline;
+        margin-right: 30px;
+        position: relative;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    .dropdown a:hover {background-color: #ddd;}
+    .show {display: block;}
+    @media screen and (max-width: 768px){
+        .header{
+            border-radius: 0 0 20% 20%;
+            text-align: center;
+            flex-direction: column;
+            padding: 5px 0;
+        }
+        .back{
+            margin-left: 0;
+        }
+        .header a.first{
+            font-size: 25px;
+        }
+        .header code{
+            font-size: 35px;
+        }
+        .dropbtn{
+            margin-left: 40px;
+        }
+        .dropdown-content{
+            margin-left: 319px;
+        }
+    }
+    @media screen and (max-width: 600px){
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .fateh{
+            width: 100%;
+            font-size: 17px;
+            border-width: 7px;
+            margin: 7px 3px;
+        }
+        hr{
+            width: 111%;
+            margin: 7px 3px;
+        }
+        .pages{
+            width: 103.5%;
+            margin: 7px 3px;
+            font-size: 13px;
+            border: 16px solid transparent;
+            border-image: url(floral.png) 220 repeat;
+        }
+        .header{
+            border-radius: 0 0 20% 20%;
+            text-align: center;
+            flex-direction: column;
+            padding: 5px 0 !important;
+        }
+        .back{
+            margin-left: 0;
+        }
+        .header a.first{
+            font-size: 25px;
+        }
+        .dropbtn{
+            padding: 7px;
+            margin-left: 40px;
+            font-size: 20px;
+        }
+        .dropdown-content{
+            margin-left: 94px;
+        }
+        .dropdown-content a{
+            text-align: center;
+            padding: 10px;
+        }
+        .header code{
+            margin: 0;
+            margin-top: 2%;
+            font-size: 30px;
+        }
+    }
+</style>
+<title>ਤ੍ਵ ਪ੍ਰਸਾਦਿ ਸ੍ਵੈਯੇ (ਦੀਨਨ ਕੀ)</title>
+</head>
+<body>
+    <div class="header" id="header">
+        <a href="index.htm" class="first"><b class="back"><i class="fa fa-angle-double-left"></i></b>Go Back</a>
+        <code id="hname">ਤ੍ਵ ਪ੍ਰਸਾਦਿ ਸ੍ਵੈਯੇ (ਦੀਨਨ ਕੀ)</code>
+        <div class="dropdown">
+            <i onclick="myFunction()" class="dropbtn fa fa-language"><b>Language</b></i>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="#">Gurmukhi</a>
+              <a href="Htva prasad savaiye deenan.htm">Hindi</a>
+              <a href="Etva prasad savaiye deenan.htm">English</a>
+            </div>
+        </div>
+        <script>
+            function myFunction() {
+              document.getElementById("myDropdown").classList.toggle("show");
+            }
+            window.onclick = function(event) {
+              if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                  var openDropdown = dropdowns[i];
+                  if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                  }
+                }
+              }
+            }
+        </script>
+    </div>
+    <script>
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+          if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            document.getElementById("header").style.padding = "0px";
+            document.getElementById("header").style.transition = "0.7s all ease-in-out";
+          } else {
+            document.getElementById("header").style.padding = "16px";
+            document.getElementById("header").style.paddingLeft = "7px";
+          }
+        }
+    </script>
+    <div class="fateh" id="first">
+        <pre>ਵਾਹਿਗੁਰੂ  ਜੀ  ਕਾ  ਖਾਲਸਾ
+ਵਾਹਿਗੁਰੂ  ਜੀ  ਕੀ  ਫਤੇਹ</pre>
+    </div>
+    <hr> 
+        <div>
+            <pre class="pages">      
+ੴ ਸਤਿਗੁਰ ਪ੍ਰਸਾਦਿ ॥
+ਪਾਤਿਸਾਹੀ ੧੦ ॥
+
+ਤ੍ਵ ਪ੍ਰਸਾਦਿ ॥ ਸ੍ਵੱਯੇ ॥
+
+ਦੀਨਨ ਕੀ ਪ੍ਰਤਿਪਾਲ ਕਰੈ ਨਿਤ ਸੰਤ ਉਬਾਰਿ ਗਨੀਮਨ ਗਾਰੈ ॥ 
+ਪੱਛ ਪਸੂ ਨਗ ਨਾਗ ਨਰਾਧਪ ਸਰਬ ਸਮੈ ਸਭ ਕੋ ਪ੍ਰਤਿਪਾਰੈ ॥ 
+ਪੋਖਤ ਹੈ ਜਲ ਮੈ ਥਲ ਮੈ ਪਲ ਮੈ ਕਲਿ ਕੇ ਨਹੀਂ ਕਰਮ ਬਿਚਾਰੈ ॥ 
+ਦੀਨ ਦਇਆਲ ਦਇਆ ਨਿਧਿ ਦੋਖਨ ਦੇਖਤ ਹੈ ਪਰੁ ਦੇਤ ਨ ਹਾਰੈ ॥੧॥੨੪੩॥
+
+ਦਾਹਤ ਹੈ ਦੁਖ ਦੋਖਨ ਕੌ ਦਲ ਦੁੱਜਨ ਕੇ ਪਲ ਮੈ ਦਲ ਡਾਰੈ ॥ 
+ਖੰਡ ਅਖੰਡ ਪ੍ਰਚੰਡ ਪਹਾਰਨ ਪੂਰਨ ਪ੍ਰੇਮ ਕੀ ਪ੍ਰੀਤ ਸੰਭਾਰੈ ॥ 
+ਪਾਰ ਨ ਪਾਇ ਸਕੈ ਪਦਮਾ ਪਤਿ ਬੇਦ ਕਤੇਬ ਅਭੇਦ ਉਚਾਰੈ ॥ 
+ਰੋਜੀ ਹੀ ਰਾਜ ਬਿਲੋਕਤ ਰਾਜਕ ਰੋਖ ਰੂਹਾਨ ਕੀ ਰੋਜੀ ਨ ਟਾਰੈ ॥੨॥੨੪੪॥
+
+ਕੀਟ ਪਤੰਗ ਕੁਰੰਗ ਭੁਜੰਗਮ ਭੂਤ ਭਵਿੱਖ ਭਵਾਨ ਬਨਾਏ ॥ 
+ਦੇਵ ਅਦੇਵ ਖਪੇ ਅਹੰਮੇਵ ਨ ਭੇਵ ਲਖਿਓ ਭ੍ਰਮ ਸਿਉ ਭਰਮਾਏ ॥ 
+ਬੇਦ ਪੁਰਾਨ ਕਤੇਬ ਕੁਰਾਨ ਹਸੇਬ ਥਕੇ ਕਰ ਹਾਥ ਨ ਆਏ ॥ 
+ਪੂਰਨ ਪ੍ਰੇਮ ਪ੍ਰਭਾਉ ਬਿਨਾ ਪਤਿ ਸਿਉ ਕਿਨ ਸ੍ਰੀ ਪਦਮਾ ਪਤਿ ਪਾਏ ॥੩॥੨੪੫॥
+
+ਆਦਿ ਅਨੰਤ ਅਗਾਧ ਅਦ੍ਵੈਖ ਸੁ ਭੂਤ ਭਵਿੱਖ ਭਵਾਨ ਅਭੈ ਹੈ ॥ 
+ਅੰਤਿ ਬਿਹੀਨ ਅਨਾਤਮ ਆਪ ਅਦਾਗ ਅਦੋਖ ਅਛਿੱਦ੍ਰ ਅਛੈ ਹੈ ॥ 
+ਲੋਗਨ ਕੇ ਕਰਤਾ ਹਰਤਾ ਜਲ ਮੈ ਥਲ ਮੈ ਭਰਤਾ ਪ੍ਰਭ ਵੈ ਹੈ ॥ 
+ਦੀਨ ਦਇਆਲ ਦਇਆ ਕਰ ਸ੍ਰੀ ਪਤਿ ਸੁੰਦਰ ਸ੍ਰੀ ਪਦਮਾ ਪਤਿ ਏਹੈ ॥੪॥੨੪੬॥
+
+ਕਾਮ ਨ ਕ੍ਰੋਧ ਨ ਲੋਭ ਨ ਮੋਹ ਨ ਰੋਗ ਨ ਸੋਗ ਨ ਭੋਗ ਨ ਭੈ ਹੈ ॥ 
+ਦੇਹ ਬਿਹੀਨ ਸਨੇਹ ਸਭੋ ਤਨ ਨੇਹ ਬਿਰਕਤ ਅਗੇਹ ਅਛੈ ਹੈ ॥ 
+ਜਾਨ ਕੋ ਦੇਤ ਅਜਾਨ ਕੋ ਦੇਤ ਜਮੀਨ ਕੋ ਦੇਤ ਜਮਾਨ ਕੋ ਦੈ ਹੈ ॥ 
+ਕਾਹੇ ਕੋ ਡੋਲਤ ਹੈ ਤੁਮਰੀ ਸੁਧ ਸੁੰਦਰ ਸ੍ਰੀ ਪਦਮਾ ਪਤਿ ਲੈਹੈ ॥੫॥੨੪੭॥
+
+ਰੋਗਨ ਤੇ ਅਰ ਸੋਗਨ ਤੇ ਜਲ ਜੋਗਨ ਤੇ ਬਹੁ ਭਾਂਤਿ ਬਚਾਵੈ ॥ 
+ਸੱਤ੍ਰ ਅਨੇਕ ਚਲਾਵਤ ਘਾਵ ਤਊ ਤਨ ਏਕੁ ਨ ਲਾਗਨ ਪਾਵੈ ॥ 
+ਰਾਖਤ ਹੈ ਅਪਨੋ ਕਰੁ ਦੈ ਕਰ ਪਾਪ ਸੰਬੂਹ ਨ ਭੇਟਨ ਪਾਵੈ ॥ 
+ਔਰ ਕੀ ਬਾਤ ਕਹਾ ਕਹ ਤੋ ਸੌਂ ਸੁ ਪੇਟ ਹੀ ਕੇ ਪਟ ਬੀਚ ਬਚਾਵੈ ॥੬॥੨੪੮॥
+
+ਜੱਛ ਭੁਜੰਗ ਸੁ ਦਾਨਵ ਦੇਵ ਅਭੇਵ ਤੁਮੈ ਸਭ ਹੀ ਕਰਿ ਧਿਆਵੈਂ ॥ 
+ਭੂਮਿ ਅਕਾਸ ਪਤਾਲ ਰਸਾਤਲ ਜੱਛ ਭੁਜੰਗ ਸਭੈ ਸਿਰ ਨਿਆਵੈਂ ॥ 
+ਪਾਇ ਸਕੈ ਨਹੀ ਪਾਰ ਪ੍ਰਭਾ ਹੂ ਕੋ ਨੇਤ ਹੀ ਨੇਤਹ ਬੇਦ ਬਤਾਵੈਂ ॥ 
+ਖੋਜ ਥਕੇ ਸਭ ਹੀ ਖੁਜੀਆ ਸੁਰ ਹਾਰ ਪਰੇ ਹਰਿ ਹਾਥ ਨ ਆਵੈ ॥੭॥੨੪੯॥
+
+ਨਾਰਦ ਸੇ ਚਤੁਰਾਨਨ ਸੇ ਰੁਮਨਾ ਰਿਖ ਸੇ ਸਭ ਹੂੰ ਮਿਲਿ ਗਾਇਓ ॥ 
+ਬੇਦ ਕਤੇਬ ਨ ਭੇਦ ਲਖਿਓ ਸਭ ਹਾਰ ਪਰੇ ਹਰਿ ਹਾਥਿ ਨ ਆਇਓ ॥ 
+ਪਾਇ ਸਕੈ ਨਹੀ ਪਾਰ ਉਮਾਪਤਿ ਸਿੱਧ ਸਨਾਥ ਸਨੰਤਨ ਧਿਆਇਓ ॥ 
+ਧਿਆਨ ਧਰੋ ਤਿਹ ਕੋ ਮਨ ਮੈਂ ਜਿਹ ਕੋ ਅਮਿਤੋਜਿ ਸਭੈ ਜਗੁ ਛਾਇਓ ॥੮॥੨੫੦॥
+
+ਬੇਦ ਪੁਰਾਨ ਕਤੇਬ ਕੁਰਾਨ ਅਭੇਦ ਨ੍ਰਿਪਾਨ ਸਭੈ ਪਚ ਹਾਰੇ ॥ 
+ਭੇਦ ਨ ਪਾਇ ਸਕਿਓ ਅਨਭੇਦ ਕੋ ਖੇਦਤ ਹੈ ਅਨਛੇਦ ਪੁਕਾਰੇ ॥ 
+ਰਾਗ ਨ ਰੂਪ ਨ ਰੇਖ ਨ ਰੰਗ ਨ ਸਾਕ ਨ ਸੋਗ ਨ ਸੰਗਿ ਤਿਹਾਰੇ ॥ 
+ਆਦਿ ਅਨਾਦਿ ਅਗਾਧ ਅਭੇਖ ਅਦ੍ਵੈਖ ਜਪਿਓ ਤਿਨ ਹੀ ਕੁਲ ਤਾਰੇ ॥੯॥੨੫੧॥
+
+ਤੀਰਥ ਕੋਟ ਕੀਏ ਇਸਨਾਨ ਦੀਏ ਬਹੁ ਦਾਨ ਮਹਾ ਬ੍ਰਤ ਧਾਰੇ ॥ 
+ਦੇਸ ਫਿਰਿਓ ਕਰ ਭੇਸ ਤਪੋਧਨ ਕੇਸ ਧਰੇ ਨ ਮਿਲੇ ਹਰਿ ਪਿਆਰੇ ॥ 
+ਆਸਨ ਕੋਟ ਕਰੇ ਅਸਟਾਂਗ ਧਰੇ ਬਹੁ ਨਿਆਸ ਕਰੇ ਮੁਖ ਕਾਰੇ ॥ 
+ਦੀਨ ਦਇਆਲ ਅਕਾਲ ਭਜੇ ਬਿਨੁ ਅੰਤ ਕੋ ਅੰਤ ਕੇ ਧਾਮ ਸਿਧਾਰੇ ॥੧੦॥੨੫੨॥              
+            </pre>
+        </div>
+        <hr> 
+        <div class="fateh">
+            <pre>ਵਾਹਿਗੁਰੂ  ਜੀ  ਕਾ  ਖਾਲਸਾ
+    ਵਾਹਿਗੁਰੂ  ਜੀ  ਕੀ  ਫਤੇਹ</pre>
+        </div>
+    </body>
+    </html>
